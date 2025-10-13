@@ -292,13 +292,22 @@
       display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;margin-top:24px
     }
     .form{
-      background:#0b1b31;border:1px solid #123155;border-radius:16px;padding:22px;box-shadow:var(--shadow)
+      background:#0b1b31;border:1px solid #123155;border-radius:16px;padding:22px;box-shadow:var(--shadow);
+      font-family:'Cairo',sans-serif;
+      margin-bottom: 8%;
     }
     .form .row{display:grid;gap:10px;margin-bottom:12px}
     .form label{color:#bcd7d3;font-size:.9rem}
     .form input,.form textarea{
       background:#071528;border:1px solid #123155;color:#eaf7f4;
+      font-family:'Cairo',sans-serif;
       border-radius:10px;padding:12px 14px;outline:none;transition:border-color .2s ease, box-shadow .2s ease
+    }
+    #waBtn{
+      font-family:'Cairo',sans-serif;
+      color: aliceblue;
+      border: none;;
+
     }
     .form textarea{min-height:120px;resize:vertical}
     .form input:focus,.form textarea:focus{border-color:#1a4e5c;box-shadow:0 0 0 3px rgba(23,227,178,.12)}
@@ -313,7 +322,7 @@
     .social-icons{display:flex;gap:16px;margin-top:10px}
     .icon-link{
       width:44px;height:44px;border-radius:10px;display:grid;place-items:center;
-      border:1px solid #123155;background:#0b1b31;transition:transform .2s ease, border-color .2s ease
+      border:1px solid #123155;background:#00bfa6;transition:transform .2s ease, border-color .2s ease
     }
     .icon-link:hover{transform:translateY(-2px);border-color:#1a4e5c}
     .icon-link img{width:22px;height:22px}
@@ -565,8 +574,8 @@
             <input type="email" id="f_email" name="email" required placeholder="email@example.com"/>
           </div>
           <div class="row">
-            <label>رقم الهاتف (اختياري)</label>
-            <input type="tel" id="f_phone" name="phone" placeholder="05xxxxxxxx"/>
+            <label>رقم الهاتف <span style="color:#ff9db1">*</span></label>
+            <input type="tel" id="f_phone" name="phone" required placeholder="05xxxxxxxx"/>
           </div>
           <div class="row">
             <label>عن مشروعك <span style="color:#ff9db1">*</span></label>
@@ -587,7 +596,7 @@
         <div class="contact-card" data-aos="fade-up" data-aos-delay="80">
           <h3 style="color:#e9fbf7;margin-bottom:6px">قنوات التواصل</h3>
           <div class="row">
-            <div><strong>واتساب:</strong> <a target="_blank" href="https://wa.me/972525272910">+972 52-527-2910</a></div>
+            <div><strong>واتساب:</strong> <a target="_blank" href="https://wa.me/972525272910">0525272910</a></div>
             <div><strong>إنستجرام:</strong> <a target="_blank" href="https://www.instagram.com/madabytarek/">@madabytarek</a></div>
           </div>
           <div class="cta-row">
