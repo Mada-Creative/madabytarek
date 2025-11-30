@@ -10,368 +10,24 @@
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <!-- Favicon & Social -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="mada.png">
   <link rel="apple-touch-icon" href="mada.png">
+
+  <!-- Social Preview -->
   <meta property="og:title" content="MadaByTarek — نحول فكرتك لهوية رقمية فخمة تبيع عنك"/>
   <meta property="og:description" content="Landing Pages • مواقع تعريفية • متاجر بسيطة • بطاقات رقمية • منيوهات • تصميم ومونتاج محتوى — تنفيذ سريع وكود نظيف."/>
   <meta property="og:image" content="mada.png"/>
   <meta property="og:url" content="https://mada-creative.github.io/sugarcake/"/>
   <meta property="og:type" content="website"/>
   <meta name="twitter:card" content="summary_large_image"/>
-
-  <style>
-    /* ===== Reset & Base ===== */
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-    direction: rtl;
-      font-family:'Cairo',sans-serif;
-      color:#E6F2F1;
-      background:
-        radial-gradient(1200px 600px at 100% -10%, rgba(23,227,178,0.12), transparent 60%),
-        radial-gradient(1000px 500px at -10% 110%, rgba(23,227,178,0.1), transparent 60%),
-        #030b1a;
-      overflow-x:hidden;
-    }
-    img{max-width:100%;height:auto;display:block}
-
-    :root{
-      --bg:#030b1a;
-      --card:#0c1426;
-      --muted:#97a5b3;
-      --brand:#17e3b2;
-      --brand-2:#00bfa6;
-      --brand-3:#6ef3d6;
-      --stroke:#0f213a;
-      --shadow:0 8px 28px rgba(0,0,0,.35);
-      --glow:0 0 24px rgba(23,227,178,.25);
-    }
-
-    /* ===== Header ===== */
-    .header{
-      width:100%;
-      position:fixed;top:0;left:0;z-index:1000;
-      background:rgba(3,11,26,.55);
-      backdrop-filter: blur(8px);
-      border-bottom:1px solid rgba(255,255,255,.04);
-      transition:all .35s ease;
-    }
-    .header .container{
-      max-width:1200px;margin:0 auto;padding:22px 20px;
-      display:flex;justify-content:space-between;align-items:center;
-      transition:padding .35s ease;
-    }
-    .logo{
-      font-family:'Cairo',sans-serif;
-      font-weight:700;letter-spacing:.3px;
-      font-size:1.3rem;
-      color:#fff;
-    }
-    .logo span{
-      color:var(--brand);
-      text-shadow:var(--glow);
-    }
-    .nav ul{list-style:none;display:flex;gap:26px}
-    .nav a{
-      text-decoration:none;color:#E6F2F1;font-weight:600;
-      font-size:.98rem;opacity:.9;transition:opacity .2s,color .2s
-    }
-    .nav a:hover{opacity:1;color:var(--brand)}
-    .menu-toggle{display:none;font-size:1.8rem;color:var(--brand);cursor:pointer}
-
-    /* Shrink on scroll (detached) */
-    .header.shrink{
-      top:15px;left:50%;transform:translateX(-50%);
-      width:calc(100% - 40px);
-      border-radius:14px;border:1px solid #0b1a2e;
-      box-shadow: var(--shadow), 0 0 0 1px rgba(23,227,178,.08) inset;
-      background:rgba(8,18,36,.75);
-    }
-    .header.shrink .container{padding:12px 20px}
-
-    /* ===== Hero ===== */
-    .hero{
-      position:relative;min-height:100dvh;
-      display:flex;justify-content:center;align-items:center;
-      padding:120px 20px 80px;
-      overflow:hidden;
-    }
-    .hero::before{
-      content:"";position:absolute;inset:-10% -20%;
-      background:
-        radial-gradient(40% 60% at 80% 10%, rgba(23,227,178,.15), transparent 60%),
-        radial-gradient(30% 50% at 10% 90%, rgba(23,227,178,.1), transparent 60%);
-      animation:floatBg 10s ease-in-out infinite alternate;
-      pointer-events:none;
-    }
-    @keyframes floatBg{
-      0%{transform:translate3d(0,0,0)}
-      100%{transform:translate3d(10px,-10px,0)}
-    }
-    .hero-content{
-      max-width:1200px;width:100%;
-      display:flex;gap:40px;align-items:center;justify-content:space-between;
-    }
-    .hero-text{flex:1}
-    .hero h1{
-        font-family:'Cairo',sans-serif;
-        font-size:clamp(35px,4.2vw,65px);
-      line-height:1.2;margin-bottom:14px;color:#fff
-    }
-    .hero span{
-        color: var(--brand);
-    }
-    .hero h1 .brand{color:var(--brand);text-shadow:var(--glow)}
-    .hero p{
-      color:var(--muted);font-size:1.1rem;line-height:1.9;margin-bottom:26px
-    }
-    .badges{
-      display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px
-    }
-    .badge{
-      border:1px solid #123155;background:#0b1b31;
-      color:#cfe9e6;border-radius:999px;padding:8px 14px;font-size:.9rem
-    }
-    .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content: center;}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      width: 80%;
-      padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;
-      transition:transform .2s ease, box-shadow .2s ease, background .2s ease,color .2s ease
-    }
-    .btn-primary{
-      background:linear-gradient(135deg,var(--brand),var(--brand-2));
-      color:#06231f; box-shadow:var(--glow)
-    }
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(23,227,178,.25)}
-    .btn-ghost{
-      border:1px solid #1d3b46;background:#0b1b31;color:#cfe9e6
-    }
-    .btn-ghost:hover{background:#0f2740}
-
-    .hero-image{flex:1;display:flex;justify-content:center}
-    .device{
-      width:min(480px,90%);aspect-ratio:4/3;border-radius:18px;
-      background:linear-gradient(135deg,#0b1a2f,#061222);
-      border:1px solid #123155;box-shadow:var(--shadow);
-      position:relative;overflow:hidden
-    }
-    .device::after{
-      content:"";position:absolute;inset:0;
-      background: radial-gradient(60% 60% at 70% 10%, rgba(23,227,178,.16), transparent 60%);
-      filter:blur(8px)
-    }
-    .device-grid{
-      position:absolute;inset:0;padding:22px;display:grid;grid-template-columns:repeat(6,1fr);gap:10px;z-index:2
-    }
-    .cell{
-      border:1px solid #123155;background:#0b1b31;border-radius:10px;
-      min-height:54px;box-shadow:inset 0 0 0 1px rgba(23,227,178,.04)
-    }
-    .cell.brand{background:linear-gradient(135deg,rgba(23,227,178,.25),rgba(23,227,178,.08));border-color:#2a786d}
-
-    /* ===== Sections ===== */
-    section{padding:90px 20px}
-    .section-wrap{max-width:1200px;margin:0 auto}
-
-    /* Services */
-    .services .head{
-      text-align:center;margin-bottom:34px
-    }
-    .eyebrow{
-      color:var(--brand-3);letter-spacing:.2em;font-size:.8rem;margin-bottom:8px
-    }
-    .title{
-        font-family:'Cairo',sans-serif;
-        font-size:clamp(26px,3.2vw,40px);color:#fff;margin-bottom:10px
-    }
-    .lead{color:var(--muted);max-width:760px;margin:0 auto;line-height:1.9}
-    .cards{
-      margin-top:34px;
-      display:grid;grid-template-columns:repeat(3,1fr);gap:18px
-    }
-    .card{
-      background:linear-gradient(180deg,#0b1426,#091326);
-      border:1px solid #102742;border-radius:16px;padding:22px;
-      box-shadow:var(--shadow);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-      min-height:200px
-    }
-    .card:hover{transform:translateY(-6px);box-shadow:0 16px 44px rgba(0,0,0,.45), var(--glow);border-color:#1a4e5c}
-    .card h3{color:#e9fbf7;font-size:1.15rem;margin-bottom:10px}
-    .card p{color:#a8bac7;line-height:1.8;font-size:.98rem}
-    .card .mini{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
-    .mini span{font-size:.8rem;border:1px solid #163a4b;background:#0b1b31;color:#cfe9e6;border-radius:999px;padding:6px 10px}
-
-        /* About */
-        .about{
-      background:linear-gradient(180deg,#0b1426,#091326);
-      border-top:1px solid #123155;border-bottom:1px solid #123155;
-      align-items: center;
-      box-shadow:var(--shadow);
-    }
-    .about h2{
-        font-family:'Cairo',sans-serif;
-
-    }
-
-    .about p{color:#cfe9e6;font-size:1.1rem;max-width:850px;margin:0 auto;line-height:2;
-        font-family:'Cairo',sans-serif;
-    
-    }
-
-    /* Why Us */
-    .why{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center
-      ;
-    }
-    .why .panel{
-      background:linear-gradient(180deg,#0b1426,#091326);border:1px solid #123155;border-radius:16px;padding:24px;box-shadow:var(--shadow)
-    }
-    .why ul{list-style:none;display:grid;gap:12px;margin-top:10px}
-    .why li{
-      padding:14px;border:1px solid #163a4b;border-radius:12px;background:#0b1b31;color:#cfe9e6
-    }
-
-    /* Showcase placeholder */
-    .showcase .grid{
-      margin-top:28px;display:flex;align-items: center;justify-content: center;flex-direction: column;gap: 20px;
-    }
-
-    .showcase h2{
-    font-family:'Cairo',sans-serif;
-    }
-    .shot {
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid #123155;
-  background: #0b1b31;
-  box-shadow: var(--shadow);
-  transition: transform .3s;
-}
-.shot:hover {transform: translateY(-4px);border-color: var(--brand);}
-.shot img {width:100%;height:240px;object-fit:cover;display:block;transition:opacity .3s;}
-.preview-btn {
-  position:absolute;
-  inset:0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:rgba(3,11,26,0.75);
-  color:#fff;
-  font-weight:700;
-  text-decoration:none;
-  font-size:1rem;
-  opacity:0;
-  transition:opacity .3s ease;
-}
-.shot:hover .preview-btn {
-  opacity:1;
-  background:rgba(23,227,178,0.1);
-  color:var(--brand);
-  backdrop-filter:blur(4px);
-}
-
-
-    /* Testimonials (simple carousel) */
-    .testimonials .stage{
-      position:relative;overflow:hidden;border:1px solid #123155;border-radius:16px;background:#0b1b31;box-shadow:var(--shadow);
-      height:360px
-    }
-    .slide{position:absolute;inset:0;display:none;place-items:center;padding:18px}
-    .slide.active{display:grid;animation:fade .6s ease}
-    .slide img{max-height:100%;object-fit:contain;border-radius:12px}
-    @keyframes fade{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
-    .dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
-    .dot{width:10px;height:10px;border-radius:50%;background:#164955;border:1px solid #2a786d;cursor:pointer}
-    .dot.active{background:var(--brand)}
-
-    /* Contact (form + WhatsApp) */
-    .contact .wrap{
-      display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;margin-top:24px
-    }
-    .form{
-      background:#0b1b31;border:1px solid #123155;border-radius:16px;padding:22px;box-shadow:var(--shadow);
-      font-family:'Cairo',sans-serif;
-      margin-bottom: 8%;
-    }
-    .form .row{display:grid;gap:10px;margin-bottom:12px}
-    .form label{color:#bcd7d3;font-size:.9rem}
-    .form input,.form textarea{
-      background:#071528;border:1px solid #123155;color:#eaf7f4;
-      font-family:'Cairo',sans-serif;
-      border-radius:10px;padding:12px 14px;outline:none;transition:border-color .2s ease, box-shadow .2s ease
-    }
-    #waBtn{
-      font-family:'Cairo',sans-serif;
-      color: aliceblue;
-      border: none;;
-
-    }
-    .form textarea{min-height:120px;resize:vertical}
-    .form input:focus,.form textarea:focus{border-color:#1a4e5c;box-shadow:0 0 0 3px rgba(23,227,178,.12)}
-    .contact-card{
-      background:linear-gradient(180deg,#0b1426,#091326);border:1px solid #123155;border-radius:16px;padding:22px;box-shadow:var(--shadow)
-    }
-    .contact-card .row{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-    .contact-card a{color:#cfe9e6;text-decoration:none}
-    .contact-card .cta-row{margin-top:10px}
-
-    /* Social mini section */
-    .social-icons{display:flex;gap:16px;margin-top:10px}
-    .icon-link{
-      width:44px;height:44px;border-radius:10px;display:grid;place-items:center;
-      border:1px solid #123155;background:#00bfa6;transition:transform .2s ease, border-color .2s ease
-    }
-    .icon-link:hover{transform:translateY(-2px);border-color:#1a4e5c}
-    .icon-link img{width:22px;height:22px}
-
-    /* Footer */
-    .footer{
-      border-top:1px solid #0b1a2e;background:#061225;
-      padding:22px 16px;text-align:center;color:#a8bac7
-    }
-    .footer .mada{color:var(--brand);font-weight:700;text-decoration:none}
-
-    /* Responsive */
-    @media (max-width: 1024px){
-      .cards{grid-template-columns:repeat(2,1fr)}
-      .why{grid-template-columns:1fr}
-      .showcase .grid{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width: 768px){
-      .menu-toggle{display:block}
-      .nav{position:absolute;top:100%;left:0;width:100%;max-height:0;overflow:hidden;
-        background:rgba(6,18,37,.98);backdrop-filter: blur(10px);border-bottom:1px solid #0b1a2e;
-        transition:max-height .35s ease;z-index:999
-      }
-      .nav ul{flex-direction:column;gap:0}
-      .nav li{border-top:1px solid #0b1a2e}
-      .nav a{display:block;padding:14px 18px}
-      .nav.active{max-height:70vh}
-
-      .hero{padding-top:120px}
-      .hero-content{flex-direction:column;gap:28px;text-align:center}
-      .hero-image{order:-1}
-      .cards{grid-template-columns:1fr}
-      .showcase .grid{grid-template-columns:1fr}
-      .contact .wrap{grid-template-columns:1fr}
-      .header.shrink{width:calc(100% - 20px)}
-    }
-
-    /* iOS Polishing */
-    @supports (-webkit-touch-callout: none){
-      .hero{min-height:100dvh}
-      [data-aos], .hero::before { -webkit-transform: translateZ(0); will-change: transform, opacity;}
-      .nav{ -webkit-overflow-scrolling: touch; }
-      body{ -webkit-text-size-adjust: 100%;}
-    }
-  </style>
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
+  <!-- Header -->
   <header class="header" id="top">
     <div class="container">
       <div class="logo">MadaBy<span>Tarek</span></div>
@@ -379,12 +35,13 @@
       <div class="menu-toggle" id="menu-toggle">☰</div>
       <nav class="nav" id="nav-menu">
         <ul>
+          
           <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#showcase">مشاريع مختارة</a></li>
+          <li><a href="#Logos">تصاميم شعارات</a></li>
           <li><a href="#services">خدماتنا</a></li>
           <li><a href="#why">ليش MadaByTarek؟</a></li>
-          <li><a href="#showcase">مشاريع مختارة</a></li>
           <li><a href="#about">تعرفوا علي اكثر</a></li>
-
           <li><a href="#testimonials">آراء عملاء</a></li>
           <li><a href="#contact">تواصل</a></li>
         </ul>
@@ -392,7 +49,7 @@
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
+  <!-- Hero -->
   <section class="hero" id="home">
     <div class="hero-content">
       <div class="hero-text" data-aos="fade-up">
@@ -401,334 +58,291 @@
          انا بعمل مواقع 
          <span>Premium✨</span>
         </h1>
-        <p>
-            تصاميم جذابة بتجبر المتصفح يوقف عندها، ويهتم ويختاركم عن غيركم !
-        </p>
-
-        <!-- <div class="badges">
-          <span class="badge">أداء عالي ⚡</span>
-          <span class="badge">تصميم مفصّل على البراند 🎨</span>
-          <span class="badge">دعم شخصي واتساب 🤝</span>
-        </div> -->
+        <p>تصاميم جذابة بتجبر المتصفح يوقف عندها، ويهتم ويختاركم عن غيركم !</p>
 
         <div class="cta-row">
-          <a class="btn btn-primary" href="#contact">احجز مكالمة مجانية</a>
+          <a class="btn btn-primary" href="#showcase">استكشف مشاريعنا !</a>
           <a class="btn btn-ghost" target="_blank" href="https://wa.me/972525272910">تواصل واتساب مباشرة</a>
         </div>
       </div>
 
       <div class="hero-image" data-aos="zoom-in">
-            <!-- مجرد تمثيل بصري حديث -->
-            <img src="mada.png" alt="">
+        <img src="mada.png" alt="">
       </div>
     </div>
   </section>
 
-  <!-- ===== Services ===== -->
+  <!-- Showcase -->
+  <section class="showcase" id="showcase">
+    <div class="section-wrap" >
+      <div class="head" data-aos="fade-up">
+        <div class="eyebrow">SHOWCASE</div>
+        <h2 class="title">مشاريع مختارة</h2>
+      </div>
+<div id="showcase-div">
+
+  <div class="grid">
+    <div class="showcase-preview">
+      <h5>مواقع بيع</h5>
+    <div class="showcase-preview-div">
+      <div class="shot" data-aos="flip-left">
+        <img src="1.png">
+        <a href="https://zainshop2.com/" target="_blank" class="preview-btn">Preview الموقع</a>
+      </div>
+  
+      <div class="shot" data-aos="flip-right">
+        <img src="2.png">
+        <a href="https://www.fefeland.com" target="_blank" class="preview-btn">Preview الموقع</a>
+      </div>
+    </div>
+    </div>
+    <div class="showcase-preview">
+      <h5>صفحات هبوط</h5>
+      <div class="showcase-preview-div">
+        <div class="shot" data-aos="flip-left">
+          <img src="3.png">
+          <a href="https://sugarcakelp.com/" target="_blank" class="preview-btn">Preview الموقع</a>
+        </div>
+        <div class="shot" data-aos="flip-left">
+          <img src="signature.png">
+          <a href="https://signature-hr.co.il/" target="_blank" class="preview-btn">Preview الموقع</a>
+        </div>
+      </div>
+    </div>
+    <div  class="showcase-preview">
+      <h5>مواقع ادارة وتنظيم</h5>
+      <div class="showcase-preview-div">
+        <div class="shot" data-aos="flip-right">
+          <img src="4.png">
+          <a href="https://majles-tournaments.onrender.com/" target="_blank" class="preview-btn">Preview</a>
+        </div>
+      </div>
+    </div>
+    <div class="showcase-preview">
+      <h5>منيوهات مطاعم/ كاتالوجات منتجات</h5>
+      <div class="showcase-preview-div">
+        <div class="shot" data-aos="flip-right">
+          <img src="5.png">
+          <a href="https://mada-creative.github.io/tantuni/" target="_blank" class="preview-btn">Preview</a>
+        </div>
+      </div>
+    </div>
+    <div class="showcase-preview">
+      <h5>بطاقات عمل رقمية</h5>
+      <div class="showcase-preview-div">
+        <div class="shot" data-aos="flip-right">
+          <img src="6.png">
+          <a href="https://qatrelnada-1126d8747345.herokuapp.com/" target="_blank" class="preview-btn">Preview</a>
+        </div>
+      </div>
+    </div>
+    </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Logos -->
+    <section class="showcase" id="Logos">
+      <div class="section-wrap" >
+        <div class="head" data-aos="fade-up">
+          <div class="eyebrow">LOGOS</div>
+          <h2 class="title">تصاميم شعارات</h2>
+        </div>
+  <div id="showcase-div">
+  
+    <div class="grid">
+      <div class="showcase-preview">
+      <div class="showcase-preview-div">
+        <div class="shot" data-aos="flip-left">
+          <img style="height: 200px; width: 200px;" src="12.png">
+        </div>
+        <div class="shot" data-aos="flip-right">
+          <img style="height: 200px; width: 200px;" src="13.png">
+        </div>
+        <div class="shot" data-aos="flip-right">
+          <img style="height: 200px; width: 200px;" src="14.png">
+        </div>
+        <div class="shot" data-aos="flip-right">
+          <img style="height: 200px; width: 200px;" src="15.png">
+        </div>
+        <div class="shot" data-aos="flip-right">
+          <img style="height: 200px; width: 200px;" src="16.png">
+        </div>
+      </div>
+      </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- Services -->
   <section class="services" id="services">
     <div class="section-wrap">
       <div class="head" data-aos="fade-up">
         <div class="eyebrow">SERVICES</div>
         <h2 class="title">شو بنقدّم في <span style="color:var(--brand)">MadaByTarek</span>؟</h2>
-        <p class="lead">
-          حلول ويب كاملة لتحويل
-          الزائر لعميل بأقل مقاومة وبأفضل تجربة.
-        </p>
+        <p class="lead">حلول ويب كاملة لتحويل الزائر لعميل بأقل مقاومة وبأفضل تجربة.</p>
       </div>
 
       <div class="cards">
         <div class="card" data-aos="fade-up">
           <h3>Landing Pages عالية التحويل</h3>
-          <p>سكربت تسويقي + تصميم فخم + تنفيذ سريع + تكامل واتساب/دفع. كل شيء محسوب للتحويل.</p>
+          <p>سكربت تسويقي + تصميم فخم + تنفيذ سريع + تكامل واتساب/دفع.</p>
           <div class="mini"><span>A/B Ready</span><span>Fast</span><span>SEO</span></div>
         </div>
+
         <div class="card" data-aos="fade-up" data-aos-delay="50">
           <h3>مواقع تعريفية (Showcase)</h3>
-          <p>موقع أنيق يعرض خدماتك وقصتك بشكل يقنع العميل—مع أداء ممتاز على الجوال.</p>
+          <p>موقع أنيق يعرض خدماتك وقصتك بشكل يقنع العميل.</p>
           <div class="mini"><span>Responsive</span><span>Brand-fit</span></div>
         </div>
+
         <div class="card" data-aos="fade-up" data-aos-delay="100">
           <h3>متاجر بسيطة & دفعات</h3>
-          <p>بيع سهل لمنتج/خدمة واحدة—أزرار دفع خارجية أو تكامل بسيط حسب حاجتك.</p>
-          <div class="mini"><span>Pay Buttons</span><span>Secure</span></div>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="150">
-          <h3>بطاقات ومنيوهات رقمية</h3>
-          <p>بطاقة أعمال ذكية ومنيو مطاعم متجاوبة .</p>
-          <div class="mini"><span>QR</span><span>Shareable</span></div>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <h3>تصميم & مونتاج محتوى</h3>
-          <p>حِزم بوستات وإنستجرام Reels بإخراج احترافي ومتناسق مع الهوية البصرية.</p>
-          <div class="mini"><span>IG Ready</span><span>Brand Kit</span></div>
+          <p>بيع سهل لمنتج/خدمة واحدة—أزرار دفع أو تكامل بسيط.</p>
+          <div class="mini"><span>Secure</span><span>Pay Buttons</span></div>
         </div>
 
+        <div class="card" data-aos="fade-up" data-aos-delay="150">
+          <h3>بطاقات ومنيوهات رقمية</h3>
+          <p>بطاقة أعمال ذكية ومنيو مطاعم متجاوبة.</p>
+          <div class="mini"><span>QR</span><span>Shareable</span></div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <h3>تصميم & مونتاج محتوى</h3>
+          <p>حِزم بوستات وإنستجرام Reels بإخراج احترافي.</p>
+          <div class="mini"><span>Brand Kit</span><span>IG Ready</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Why Us ===== -->
+  <!-- Why -->
   <section id="why">
     <div class="section-wrap why">
       <div class="panel" data-aos="fade-up">
         <div class="eyebrow">WHY US</div>
         <h2 class="title">ليش تختار <span style="color:var(--brand)">MadaByTarek</span>؟</h2>
         <ul>
-          <li>تصميم فخم وحديث يراعي تفاصيل البراند ويبدو “غالي”.</li>
-          <li>كود نظيف وأداء عالي—سرعة تحميل ممتازة وتجربة هاتف مثالية.</li>
-          <li>نسخ إعلاني (Copy) مقنع - مش بس شكل، محتوى يبيع.</li>
-          <li>تسليم سريع + متابعة شخصية عبر واتساب.</li>
+          <li>تصميم فخم وحديث يراعي تفاصيل البراند.</li>
+          <li>كود نظيف وأداء عالي.</li>
+          <li>نسخ إعلاني (Copy) مقنع.</li>
+          <li>تسليم سريع + متابعة عبر واتساب.</li>
+          <li>صور احترافية ملائمة لموقعك</li>
+
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ===== Showcase (placeholder) ===== -->
-  <section class="showcase" id="showcase">
-    <div class="section-wrap">
-      <div class="head" data-aos="fade-up">
-        <div class="eyebrow">SHOWCASE</div>
-        <h2 class="title">مشاريع مختارة</h2>
-      </div>
-      <div class="grid">
-        <div class="shot" data-aos="flip-left">
-          <img src="1.png" alt="showcase1">
-          <a href="https://zainshop2.com/" target="_blank" class="preview-btn">Preview الموقع</a>
-        </div>
-      
-        <div class="shot" data-aos="flip-right" data-aos-delay="60">
-          <img src="2.png" alt="showcase2">
-          <a href="https://www.fefeland.com" target="_blank" class="preview-btn">Preview الموقع</a>
-        </div>
-      
-        <div class="shot" data-aos="flip-left" data-aos-delay="120">
-          <img src="3.png" alt="showcase3">
-          <a href="https://mada-creative.github.io/SugarCake/" target="_blank" class="preview-btn">Preview الموقع</a>
-        </div>
-      
-        <div class="shot" data-aos="flip-right" data-aos-delay="180">
-          <img src="4.png" alt="showcase4">
-          <a href="https://example4.com" target="_blank" class="preview-btn">Preview الموقع</a>
-        </div>
-
-        <div class="shot" data-aos="flip-left" data-aos-delay="180">
-          <img src="5.png" alt="showcase4">
-          <a href="https://mada-creative.github.io/tantuni/" target="_blank" class="preview-btn">Preview الموقع</a>
-        </div>
-      </div>
-      
-      </div>
-    </div>
-  </section>
-
-
+  
   <!-- About -->
   <section class="about" id="about">
     <div class="section-wrap">
-        <img data-aos="zoom-in" src="mada.png" alt="Tarek">
-        <div class="eyebrow">ABOUT ME</div>
-        <h2 class="title"> تعرفوا عليّ أكثر</h2>
-        <p>
-        أنا طارق سلامة، مؤسس استوديو MadaByTarek. بساعد المشاريع الطموحة على بناء حضور رقمي فخم من خلال صفحات هبوط ومواقع تعريفية بتصميم يبيع قبل ما يتكلم. رؤيتي هي تحويل الفكرة إلى هوية رقمية تعكس قيمها وتضاعف نتائجها.
-      </p>
+      <div class="about-content">
+        <div class="about-image" data-aos="zoom-in">
+          <img src="mada.png" alt="Tarek">
+        </div>
+
+        <div class="about-text" data-aos="fade-left">
+          <h2 class="title">اذا بعدنا متعرفناش — فرصة نتعرف</h2>
+          <p>
+          أنا طارق سلامة، مؤسس استوديو MadaByTarek.  
+          بساعد المشاريع الطموحة على بناء هوية رقمية فخمة تبيع قبل ما تحكي.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Testimonials ===== -->
+  <!-- Testimonials -->
   <section class="testimonials" id="testimonials">
-    <div class="section-wrap">
-      <div class="head" data-aos="fade-up">
+    <div class="section-wrap" id="testimonials-div">
+      <div class="head">
         <div class="eyebrow">TESTIMONIALS</div>
-        <h2 class="title">آراء عملاء</h2>
-        <p class="lead">بعض مما وصلنا بعد التسليم — خليه دليل اجتماعي قوي على الصفحة.</p>
+        <h2 class="title">آراء العملاء</h2>
       </div>
 
-      <div class="stage" data-aos="fade-up">
-        <div class="slide active"><img src="1.jpeg" alt="testimonial 1"></div>
-        <div class="slide"><img src="2.jpeg" alt="testimonial 2"></div>
-        <div class="slide"><img src="3.jpeg" alt="testimonial 3"></div>
+      <div class="stage">
+        <div class="slide active"><img src="test2.jpg"></div>
+        <div class="slide"><img src="test1.jpg"></div>
+        <div class="slide"><img src="test2.jpg"></div>
       </div>
       <div class="dots">
-        <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Contact & Form ===== -->
+  <!-- Contact -->
   <section class="contact" id="contact">
     <div class="section-wrap">
-      <div class="head" data-aos="fade-up">
+      <div class="head">
         <div class="eyebrow">CONTACT</div>
         <h2 class="title">جاهز نبدأ؟</h2>
-        <p class="lead">احجز مكالمة ملائمة قصيرة—نفهم مشروعك، نقترح الحل الأنسب، ونبدأ التنفيذ.</p>
-      </div>
-      <div class="wrap">
-        <!-- Form (no email submission) -->
-        <form class="form" id="leadForm" onsubmit="return false;" data-aos="fade-up">
-          <div class="row">
-            <label>الاسم الكامل <span style="color:#ff9db1">*</span></label>
-            <input type="text" id="f_name" name="name" required placeholder="اسمك"/>
-          </div>
-          <div class="row">
-            <label>البريد الإلكتروني <span style="color:#ff9db1">*</span></label>
-            <input type="email" id="f_email" name="email" required placeholder="email@example.com"/>
-          </div>
-          <div class="row">
-            <label>رقم الهاتف <span style="color:#ff9db1">*</span></label>
-            <input type="tel" id="f_phone" name="phone" required placeholder="05xxxxxxxx"/>
-          </div>
-          <div class="row">
-            <label>عن مشروعك <span style="color:#ff9db1">*</span></label>
-            <textarea id="f_message" name="message" required placeholder="احكيلي بإيجاز: شو بدك نبني؟"></textarea>
-          </div>
-      
-          <div class="cta-row">
-            <!-- نفّيت زر الإرسال عبر الإيميل وحافظنا على زر واتساب -->
-            <button type="button" class="btn btn-primary" id="waBtn">أرسل التفاصيل عبر واتساب</button>
-            <a class="btn btn-ghost" href="https://wa.me/972525272910" target="_blank" id="waFallback" style="display:none">فتح واتساب</a>
-          </div>
-      
-          <!-- مكان لرسائل الخطأ الخفيفة -->
-          <p id="formError" style="display:none;color:#ff9db1;margin-top:10px;font-size:0.95rem;"></p>
-        </form>
+        <p class="lead">احجز مكالمة ملائمة قصيرة—نفهم مشروعك ونبدأ التنفيذ.</p>
       </div>
 
-        <div class="contact-card" data-aos="fade-up" data-aos-delay="80">
-          <h3 style="color:#e9fbf7;margin-bottom:6px">قنوات التواصل</h3>
+      <div class="wrap">
+        <!-- WhatsApp Form -->
+        <form class="form" id="leadForm" onsubmit="return false;">
           <div class="row">
-            <div><strong>واتساب:</strong> <a target="_blank" href="https://wa.me/972525272910">0525272910</a></div>
-            <div><strong>إنستجرام:</strong> <a target="_blank" href="https://www.instagram.com/madabytarek/">@madabytarek</a></div>
+            <label>الاسم الكامل *</label>
+            <input type="text" id="f_name" required>
           </div>
+
+          <div class="row">
+            <label>البريد الإلكتروني *</label>
+            <input type="email" id="f_email" required>
+          </div>
+
+          <div class="row">
+            <label>رقم الهاتف *</label>
+            <input type="tel" id="f_phone" required>
+          </div>
+
+          <div class="row">
+            <label>عن مشروعك *</label>
+            <textarea id="f_message" required></textarea>
+          </div>
+
           <div class="cta-row">
-            <a class="btn btn-primary" target="_blank" href="https://wa.me/972525272910">تواصل فوراً واتساب</a>
-            <div class="social-icons">
-              <a class="icon-link" target="_blank" href="https://www.instagram.com/madabytarek/">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="IG"/>
-              </a>
-              <a class="icon-link" target="_blank" href="https://wa.me/972525272910">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WA"/>
-              </a>
-            </div>
+            <button class="btn btn-primary" id="waBtn">أرسل التفاصيل عبر واتساب</button>
+          </div>
+
+          <p id="formError" class="err"></p>
+        </form>
+
+        <div class="contact-card" data-aos="fade-up">
+          <h3>تواصلوا معنا وتابعونا !</h3>
+          <div class="row">
+            <div><strong>واتساب:</strong> <a href="https://wa.me/972525272910" target="_blank">0525272910</a></div>
+            <div><strong>إنستجرام:</strong> <a href="https://instagram.com/madabytarek" target="_blank">@madabytarek</a></div>
+          </div>
+
+          <div class="social-icons">
+            <a class="icon-link" href="https://instagram.com/madabytarek" target="_blank"><img src="ig.svg"></a>
+            <a class="icon-link" href="https://wa.me/972525272910" target="_blank"><img src="wa.svg"></a>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ===== Footer ===== -->
+  <!-- Footer -->
   <footer class="footer">
-    <p>© <span id="year"></span> MadaByTarek — تم التصميم والتطوير بكل حب. تابعنا على
-      <a class="mada" target="_blank" href="https://www.instagram.com/madabytarek/">Instagram</a>
-    </p>
+    <p>© <span id="year"></span> MadaByTarek — Designed & Developed ❤️</p>
   </footer>
 
-  <!-- Libs -->
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <script>
-    // AOS
-    AOS.init({ duration: 700, once: true });
+  <!-- JS -->
+  <script src="script.js"></script>
 
-    // Header shrink + mobile menu
-    const header = document.querySelector('.header');
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('#nav-menu a');
-
-    const onScroll = () => {
-      if (window.scrollY > 12) header.classList.add('shrink');
-      else header.classList.remove('shrink');
-    };
-    window.addEventListener('scroll', onScroll);
-
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-    navLinks.forEach(a => a.addEventListener('click', ()=> navMenu.classList.remove('active')));
-
-    // Testimonials carousel (simple)
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    let current = 0;
-    const show = (i)=>{
-      slides.forEach((s,idx)=> s.classList.toggle('active', idx===i));
-      dots.forEach((d,idx)=> d.classList.toggle('active', idx===i));
-    }
-    const next = ()=>{ current=(current+1)%slides.length; show(current); }
-    let timer = setInterval(next, 4000);
-    dots.forEach((d,idx)=>{
-      d.addEventListener('click', ()=>{
-        current=idx; show(current); clearInterval(timer); timer=setInterval(next,4000);
-      });
-    });
-
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    (function() {
-    // رقم الواتساب بدون + — غيّره لو تحب رقم الورشة الحقيقي
-    const phone = "972525272910";
-
-    const waBtn = document.getElementById("waBtn");
-    const nameEl = document.getElementById("f_name");
-    const emailEl = document.getElementById("f_email");
-    const phoneEl = document.getElementById("f_phone");
-    const msgEl = document.getElementById("f_message");
-    const errorEl = document.getElementById("formError");
-    const fallback = document.getElementById("waFallback");
-
-    function validate() {
-      // تحقق من الحقول المطلوبة
-      if (!nameEl.value.trim()) { errorEl.textContent = "الرجاء إدخال الاسم الكامل."; errorEl.style.display = "block"; nameEl.focus(); return false; }
-      if (!emailEl.value.trim()) { errorEl.textContent = "الرجاء إدخال البريد الإلكتروني."; errorEl.style.display = "block"; emailEl.focus(); return false; }
-      if (!msgEl.value.trim()) { errorEl.textContent = "الرجاء كتابة ملخص عن المشروع."; errorEl.style.display = "block"; msgEl.focus(); return false; }
-      // نظف رسالة الخطأ لو كل شي صحيح
-      errorEl.style.display = "none";
-      return true;
-    }
-
-    waBtn.addEventListener("click", function () {
-      if (!validate()) return;
-
-      // جهّز نص الرسالة بالعربي — غير الصيغة إذا حابب
-      const lines = [
-        "مرحباً 👋",
-        "لدي طلب عبر موقع MadaByTarek — تفاصيل العميل أدناه:",
-        "",
-        "الاسم: " + nameEl.value.trim(),
-        "البريد الإلكتروني: " + emailEl.value.trim(),
-        "رقم الهاتف: " + (phoneEl.value.trim() || "—"),
-        "وصف المشروع: " + msgEl.value.trim(),
-        "",
-        "أرسلت من صفحة التواصل — الرجاء المتابعة. شكراً!"
-      ];
-
-      const message = lines.join("\n");
-      const encoded = encodeURIComponent(message);
-
-      // نسخ رابط wa.me (يعمل على الموبايل والكمبيوتر؛ سيحاول فتح WhatsApp Web على الديسكتوب)
-      const waUrl = `https://wa.me/${phone}?text=${encoded}`;
-
-      // افتح في تبويب جديد
-      window.open(waUrl, "_blank");
-
-      // (اختياري) بعد الفتح، نعطل/نخفي الفورم لمنع إعادة الإرسال المتكرر
-      // هنا نلمّح للمستخدم أن الصفحة لم تعد صالحة: (تقدر تعدل النص)
-      setTimeout(() => {
-        document.getElementById("leadForm").innerHTML = `
-          <div style="padding:40px 20px;text-align:center;font-family:'Cairo',sans-serif;color:#d45b78;">
-            ✅ تم فتح WhatsApp بنجاح — شكرًا! <br/>
-            هذه الصفحة لم تعد صالحة للمشاركة.
-          </div>`;
-        // غير عنوان الـ URL إن أردت (اختياري)
-        try { history.replaceState(null, "", "thankyou-sent.html"); } catch(e) {}
-      }, 1200);
-    });
-
-    // خيار احتياطي: إظهار رابط مباشر لو احتاج الزبون (مثلاً لو المنع لفتح نوافذ منبثقة)
-    fallback.style.display = "none";
-  })();
-  </script>
 </body>
 </html>
