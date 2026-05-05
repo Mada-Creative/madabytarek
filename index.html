@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MadaByTarek — High-Tech Web Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mada — High-End Web Studio</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Outfit:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -18,32 +22,35 @@
   <link rel="apple-touch-icon" href="mada.png">
 
   <!-- Social Preview -->
-  <meta property="og:title" content="MadaByTarek — نحول فكرتك لهوية رقمية فخمة تبيع عنك"/>
-  <meta property="og:description" content="Landing Pages • مواقع تعريفية • متاجر بسيطة • بطاقات رقمية • منيوهات • تصميم ومونتاج محتوى — تنفيذ سريع وكود نظيف."/>
-  <meta property="og:image" content="mada.png"/>
-  <meta property="og:url" content="https://mada-creative.github.io/sugarcake/"/>
-  <meta property="og:type" content="website"/>
-  <meta name="twitter:card" content="summary_large_image"/>
+  <meta property="og:title" content="Mada — نحول فكرتك لهوية رقمية فخمة تبيع عنك" />
+  <meta property="og:description"
+    content="Landing Pages • مواقع تعريفية • متاجر إلكترونية — بناء تجارب مستخدم استثنائية." />
+  <meta property="og:image" content="mada.png" />
+  <meta property="og:url" content="https://mada-creative.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
+
 <body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
 
   <!-- Header -->
   <header class="header" id="top">
     <div class="container">
-      <div class="logo">MadaBy<span>Tarek</span></div>
+      <div class="logo"><img src="MadaStudio.png" alt="Mada Studio"></div>
 
       <div class="menu-toggle" id="menu-toggle">☰</div>
       <nav class="nav" id="nav-menu">
         <ul>
-          
           <li><a href="#home">الرئيسية</a></li>
-          <li><a href="#showcase">مشاريع مختارة</a></li>
-          <li><a href="#Logos">تصاميم شعارات</a></li>
+          <li><a href="#showcase">أعمالنا</a></li>
           <li><a href="#services">خدماتنا</a></li>
-          <li><a href="#why">ليش MadaByTarek؟</a></li>
-          <li><a href="#about">تعرفوا علي اكثر</a></li>
-          <li><a href="#testimonials">آراء عملاء</a></li>
-          <li><a href="#contact">تواصل</a></li>
+          <li><a href="#process">آلية العمل</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+          <li><a href="#contact" class="nav-cta">ابدأ مشروعك</a></li>
         </ul>
       </nav>
     </div>
@@ -51,297 +58,259 @@
 
   <!-- Hero -->
   <section class="hero" id="home">
+    <!-- Animated Abstract Mesh Background -->
+    <div class="hero-bg-orb"></div>
+    <div class="hero-bg-orb orb-2"></div>
+
     <div class="hero-content">
-      <div class="hero-text" data-aos="fade-up">
-        <h1>
-         انا بعملش مواقع عادية !<br/>
-         انا بعمل مواقع 
-         <span>Premium✨</span>
+      <div class="hero-text">
+        <div class="eyebrow" data-aos="fade-up">HIGH-END WEB DESIGN STUDIO</div>
+        <h1 data-aos="fade-up" data-aos-delay="100">
+          نحوّل فكرتك إلى واجهة رقمية فخمة <br /><span>تضاعف مبيعاتك.</span>
         </h1>
-        <p>تصاميم جذابة بتجبر المتصفح يوقف عندها، ويهتم ويختاركم عن غيركم !</p>
+        <p data-aos="fade-up" data-aos-delay="200">
+          نحن لا نصمم مجرد مواقع، بل نبني تجارب مستخدم استثنائية (UX/UI) تعكس قيمة علامتك التجارية وتجبر الزائر على
+          اتخاذ القرار.
+        </p>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#showcase">استكشف مشاريعنا !</a>
-          <a class="btn btn-ghost" target="_blank" href="https://wa.me/972525272910">تواصل واتساب مباشرة</a>
+        <div class="cta-row" data-aos="fade-up" data-aos-delay="300">
+          <a class="btn btn-primary" href="#contact">احجز استشارة مجانية</a>
+          <a class="btn btn-ghost" href="#showcase">شاهد أعمالنا</a>
         </div>
-      </div>
-
-      <div class="hero-image" data-aos="zoom-in">
-        <img src="mada.png" alt="">
       </div>
     </div>
   </section>
 
-  <!-- Showcase -->
+  <!-- Marquee (Social Proof) -->
+  <section class="marquee-section">
+    <div class="marquee-wrapper">
+      <div class="marquee">
+        <span>شركاء النجاح</span><span class="dot"></span>
+        <span>علامات تجارية وثقت بنا</span><span class="dot"></span>
+        <span>شركاء النجاح</span><span class="dot"></span>
+        <span>علامات تجارية وثقت بنا</span><span class="dot"></span>
+        <span>شركاء النجاح</span><span class="dot"></span>
+        <span>علامات تجارية وثقت بنا</span><span class="dot"></span>
+        <span>شركاء النجاح</span><span class="dot"></span>
+        <span>علامات تجارية وثقت بنا</span><span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase / Case Studies -->
   <section class="showcase" id="showcase">
-    <div class="section-wrap" >
+    <div class="section-wrap">
       <div class="head" data-aos="fade-up">
-        <div class="eyebrow">SHOWCASE</div>
-        <h2 class="title">مشاريع مختارة</h2>
+        <div class="eyebrow">CASE STUDIES</div>
+        <h2 class="title">مشاريع صُممت للتحويل</h2>
       </div>
-<div id="showcase-div">
 
-  <div class="grid">
-    <div class="showcase-preview">
-      <h5>مواقع بيع/متاجر الكترونية</h5>
-    <div class="showcase-preview-div">
-      <div class="shot" data-aos="flip-left">
-        <img src="1.png">
-        <a href="https://zainshop2.com/" target="_blank" class="preview-btn">Preview الموقع</a>
-      </div>
-      <div class="shot" data-aos="flip-right">
-        <img src="2.png">
-        <a href="https://www.fefeland.com" target="_blank" class="preview-btn">Preview الموقع</a>
-      </div>
-      <div class="shot" data-aos="flip-right">
-        <img src="33.png">
-        <a href="https://esraahassonacademy.com/" target="_blank" class="preview-btn">Preview الموقع</a>
-      </div>
-      <div class="shot" data-aos="flip-right">
-        <img src="sugarcake.png">
-        <a href="https://sugar-cake.com/" target="_blank" class="preview-btn">Preview الموقع</a>
-      </div>
-            <div class="shot" data-aos="flip-right">
-        <img src="adangifts.png">
-        <a href="https://adangifts.com/" target="_blank" class="preview-btn">Preview الموقع</a>
-      </div>
-    </div>
-    </div>
-    <div class="showcase-preview">
-      <h5>صفحات هبوط</h5>
-      <div class="showcase-preview-div">
-        <div class="shot" data-aos="flip-left">
-          <img src="3.png">
-          <a href="https://sugarcakelp.com/" target="_blank" class="preview-btn">Preview الموقع</a>
+      <div class="case-studies">
+        <!-- Project 1 -->
+        <div class="case-study left">
+          <div class="cs-image" data-aos="fade-right">
+            <img src="1.png" alt="Zain Shop">
+            <div class="cs-overlay">
+              <a href="https://zainshop2.com/" target="_blank" class="btn btn-primary btn-sm">زيارة الموقع</a>
+            </div>
+          </div>
+          <div class="cs-info" data-aos="fade-left">
+            <h3>Zain Shop</h3>
+            <p class="cs-category">متجر إلكتروني / E-Commerce</p>
+            <p class="cs-desc">واجهة تسوق مريحة وسريعة مصممة لتقليل التخلي عن سلة المشتريات وزيادة نسبة التحويل (CRO).
+            </p>
+          </div>
         </div>
-        <div class="shot" data-aos="flip-left">
-          <img src="signature.png">
-          <a href="https://signature-hr.co.il/" target="_blank" class="preview-btn">Preview الموقع</a>
+
+        <!-- Project 2 -->
+        <div class="case-study right">
+          <div class="cs-info" data-aos="fade-right">
+            <h3>Sugar Cake</h3>
+            <p class="cs-category">موقع تعريفي + طلبات / Branding</p>
+            <p class="cs-desc">هوية رقمية فخمة تعكس جودة المنتجات، مع تجربة مستخدم سلسة لتصفح الكتالوج.</p>
+          </div>
+          <div class="cs-image" data-aos="fade-left">
+            <img src="sugarcake.png" alt="Sugar Cake">
+            <div class="cs-overlay">
+              <a href="https://sugar-cake.com/" target="_blank" class="btn btn-primary btn-sm">زيارة الموقع</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div  class="showcase-preview">
-      <h5>مواقع ادارة وتنظيم</h5>
-      <div class="showcase-preview-div">
-        <div class="shot" data-aos="flip-right">
-          <img src="4.png">
-          <a href="https://majles-tournaments.onrender.com/" target="_blank" class="preview-btn">Preview</a>
-        </div>
-      </div>
-    </div>
-    <div class="showcase-preview">
-      <h5>منيوهات مطاعم/ كاتالوجات منتجات</h5>
-      <div class="showcase-preview-div">
-        <div class="shot" data-aos="flip-right">
-          <img src="5.png">
-          <a href="https://mada-creative.github.io/tantuni/" target="_blank" class="preview-btn">Preview</a>
+
+        <!-- Project 3 -->
+        <div class="case-study left">
+          <div class="cs-image" data-aos="fade-right">
+            <img src="abaq.png" alt="Abaq">
+            <div class="cs-overlay">
+              <a href="https://itsabaq.com/" target="_blank" class="btn btn-primary btn-sm">زيارة الموقع</a>
+            </div>
+          </div>
+          <div class="cs-info" data-aos="fade-left">
+            <h3>Abaq - عبق</h3>
+            <p class="cs-category">متجر إلكتروني فخم / Luxury E-Commerce</p>
+            <p class="cs-desc">تصميم مستوحى من الفخامة يعزز الثقة ويسلط الضوء على تفاصيل العلامة التجارية الراقية.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="showcase-preview">
-      <h5>بطاقات عمل رقمية</h5>
-      <div class="showcase-preview-div">
-        <div class="shot" data-aos="flip-right">
-          <img src="6.png">
-          <a href="https://qatrelnada-1126d8747345.herokuapp.com/" target="_blank" class="preview-btn">Preview</a>
-        </div>
-      </div>
-    </div>
-    </div>
+
+      <div class="view-more" data-aos="fade-up">
+        <a href="#services" class="btn btn-ghost">اكتشف خدماتنا</a>
       </div>
     </div>
   </section>
-
-    <!-- Logos -->
-    <section class="showcase" id="Logos">
-      <div class="section-wrap" >
-        <div class="head" data-aos="fade-up">
-          <div class="eyebrow">LOGOS</div>
-          <h2 class="title">تصاميم شعارات</h2>
-        </div>
-  <div id="showcase-div">
-  
-    <div class="grid">
-      <div class="showcase-preview">
-      <div class="showcase-preview-div">
-        <div class="shot" data-aos="flip-left">
-          <img style="height: 200px; width: 200px;" src="12.png">
-        </div>
-        <div class="shot" data-aos="flip-right">
-          <img style="height: 200px; width: 200px;" src="13.png">
-        </div>
-        <div class="shot" data-aos="flip-right">
-          <img style="height: 200px; width: 200px;" src="14.png">
-        </div>
-        <div class="shot" data-aos="flip-right">
-          <img style="height: 200px; width: 200px;" src="15.png">
-        </div>
-        <div class="shot" data-aos="flip-right">
-          <img style="height: 200px; width: 200px;" src="16.png">
-        </div>
-                <div class="shot" data-aos="flip-right">
-          <img style="height: 200px; width: 200px;" src="roaalogo.png">
-        </div>
-      </div>
-      </div>
-      </div>
-        </div>
-      </div>
-    </section>
-
 
   <!-- Services -->
   <section class="services" id="services">
     <div class="section-wrap">
       <div class="head" data-aos="fade-up">
-        <div class="eyebrow">SERVICES</div>
-        <h2 class="title">شو بنقدّم في <span style="color:var(--brand)">MadaByTarek</span>؟</h2>
-        <p class="lead">حلول ويب كاملة لتحويل الزائر لعميل بأقل مقاومة وبأفضل تجربة.</p>
+        <div class="eyebrow">OUR EXPERTISE</div>
+        <h2 class="title">حلول مبنية على النتائج</h2>
+        <p class="lead">نحن لا نبيع تصاميم، بل نبيع حلولاً متكاملة تزيد من عملائك وتوفر وقتك.</p>
       </div>
 
       <div class="cards">
-        <div class="card" data-aos="fade-up">
-          <h3>Landing Pages عالية التحويل</h3>
-          <p>سكربت تسويقي + تصميم فخم + تنفيذ سريع + تكامل واتساب/دفع.</p>
-          <div class="mini"><span>A/B Ready</span><span>Fast</span><span>SEO</span></div>
+        <div class="card glass" data-aos="fade-up">
+          <div class="icon">🚀</div>
+          <h3>صفحات هبوط عالية التحويل</h3>
+          <p>أكثر من مجرد تصميم. نبني مساراً تسويقياً كاملاً مع نسخ إعلاني مقنع يستهدف الزائر ويقوده مباشرة للشراء.</p>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="50">
-          <h3>مواقع تعريفية (Showcase)</h3>
-          <p>موقع أنيق يعرض خدماتك وقصتك بشكل يقنع العميل.</p>
-          <div class="mini"><span>Responsive</span><span>Brand-fit</span></div>
+        <div class="card glass" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon">💎</div>
+          <h3>مواقع تعريفية فاخرة (Showcase)</h3>
+          <p>واجهة رقمية تليق بمكانتك. نبني مواقع تعكس احترافيتك وتخلق انطباعاً أولياً لا يُنسى لزوارك.</p>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <h3>متاجر بسيطة & دفعات</h3>
-          <p>بيع سهل لمنتج/خدمة واحدة—أزرار دفع أو تكامل بسيط.</p>
-          <div class="mini"><span>Secure</span><span>Pay Buttons</span></div>
-        </div>
-
-        <div class="card" data-aos="fade-up" data-aos-delay="150">
-          <h3>بطاقات ومنيوهات رقمية</h3>
-          <p>بطاقة أعمال ذكية ومنيو مطاعم متجاوبة.</p>
-          <div class="mini"><span>QR</span><span>Shareable</span></div>
-        </div>
-
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <h3>تصميم & مونتاج محتوى</h3>
-          <p>حِزم بوستات وإنستجرام Reels بإخراج احترافي.</p>
-          <div class="mini"><span>Brand Kit</span><span>IG Ready</span></div>
+        <div class="card glass" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon">🛒</div>
+          <h3>متاجر إلكترونية مبيعة</h3>
+          <p>تجارب تسوق سلسة خالية من التعقيد، مجهزة تقنياً لرفع نسبة المبيعات بأقل مقاومة من المشتري.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why -->
-  <section id="why">
-    <div class="section-wrap why">
-      <div class="panel" data-aos="fade-up">
-        <div class="eyebrow">WHY US</div>
-        <h2 class="title">ليش تختار <span style="color:var(--brand)">MadaByTarek</span>؟</h2>
-        <ul>
-          <li>تصميم فخم وحديث يراعي تفاصيل البراند.</li>
-          <li>كود نظيف وأداء عالي.</li>
-          <li>نسخ إعلاني (Copy) مقنع.</li>
-          <li>تسليم سريع + متابعة عبر واتساب.</li>
-          <li>صور احترافية ملائمة لموقعك</li>
-
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  
-  <!-- About -->
-  <section class="about" id="about">
+  <!-- Process -->
+  <section class="process" id="process">
     <div class="section-wrap">
-      <div class="about-content">
-        <div class="about-image" data-aos="zoom-in">
-          <img src="mada.png" alt="Tarek">
-        </div>
+      <div class="head" data-aos="fade-up">
+        <div class="eyebrow">THE PROCESS</div>
+        <h2 class="title">خطوات بسيطة لنجاحك الرقمي</h2>
+      </div>
 
-        <div class="about-text" data-aos="fade-left">
-          <h2 class="title">اذا بعدنا متعرفناش — فرصة نتعرف</h2>
-          <p>
-          أنا طارق سلامة، مؤسس استوديو MadaByTarek.  
-          بساعد المشاريع الطموحة على بناء هوية رقمية فخمة تبيع قبل ما تحكي.
-          </p>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <h4>1. الاستكشاف والاستراتيجية</h4>
+            <p>نجلس معاً لفهم أهدافك، جمهورك، والمشاكل التي تريد حلها. نبني الخطة المثالية لمشروعك.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <h4>2. التصميم (UI/UX)</h4>
+            <p>نبدأ بتصميم نماذج مرئية فخمة تضمن أفضل تجربة استخدام لزوارك مع مراعاة أدق تفاصيل علامتك.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <h4>3. التطوير والإطلاق 🚀</h4>
+            <p>نحوّل التصميم إلى موقع حقيقي بأكواد نظيفة وأداء فائق، ونسلمه لك جاهزاً لاستقبال العملاء.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials" id="testimonials">
-    <div class="section-wrap" id="testimonials-div">
-      <div class="head">
-        <div class="eyebrow">TESTIMONIALS</div>
-        <h2 class="title">آراء العملاء</h2>
-      </div>
-
-      <div class="stage">
-        <div class="slide active"><img src="test2.jpg"></div>
-        <div class="slide"><img src="test1.jpg"></div>
-        <div class="slide"><img src="test2.jpg"></div>
-      </div>
-      <div class="dots">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
     <div class="section-wrap">
-      <div class="head">
-        <div class="eyebrow">CONTACT</div>
-        <h2 class="title">جاهز نبدأ؟</h2>
-        <p class="lead">احجز مكالمة ملائمة قصيرة—نفهم مشروعك ونبدأ التنفيذ.</p>
+      <div class="head" data-aos="fade-up">
+        <div class="eyebrow">FAQ</div>
+        <h2 class="title">الأسئلة الشائعة</h2>
       </div>
 
-      <div class="wrap">
-        <!-- WhatsApp Form -->
-        <form class="form" id="leadForm" onsubmit="return false;">
-          <div class="row">
-            <label>الاسم الكامل *</label>
-            <input type="text" id="f_name" required>
+      <div class="faq-container">
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">كم يستغرق بناء الموقع؟<span class="icon">+</span></button>
+          <div class="faq-answer">
+            <p>يعتمد ذلك على حجم المشروع. صفحات الهبوط والمواقع البسيطة تأخذ من أسبوع إلى أسبوعين. المتاجر والمشاريع
+              الكبيرة قد تستغرق 3-4 أسابيع لضمان الجودة العالية.</p>
           </div>
-
-          <div class="row">
-            <label>البريد الإلكتروني *</label>
-            <input type="email" id="f_email" required>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+          <button class="faq-question">هل الموقع سيكون متجاوباً مع الجوال؟<span class="icon">+</span></button>
+          <div class="faq-answer">
+            <p>بالتأكيد. أكثر من 80% من الزيارات تأتي من الجوال، لذلك نعتمد نهج "Mobile-First" في التصميم لضمان تجربة
+              مثالية على جميع الأجهزة.</p>
           </div>
-
-          <div class="row">
-            <label>رقم الهاتف *</label>
-            <input type="tel" id="f_phone" required>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+          <button class="faq-question">هل سأتمكن من تعديل المحتوى لاحقاً؟<span class="icon">+</span></button>
+          <div class="faq-answer">
+            <p>نعم، نوفر لك إمكانية إدارة المحتوى بسهولة إذا كان مشروعك يتطلب ذلك، ونقدم دعماً وتوجيهاً كاملاً لتتمكن من
+              إدارة موقعك بنفسك.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="row">
-            <label>عن مشروعك *</label>
-            <textarea id="f_message" required></textarea>
+  <!-- Split CTA / Contact -->
+  <section class="contact-split" id="contact">
+    <div class="section-wrap">
+      <div class="contact-grid">
+        <div class="contact-text" data-aos="fade-left">
+          <div class="eyebrow">READY?</div>
+          <h2>مستعد للارتقاء بعلامتك التجارية؟</h2>
+          <p>دعنا نناقش كيف يمكننا تحويل رؤيتك إلى واقع رقمي مذهل يخدم أهدافك ويزيد من أرباحك.</p>
+
+          <div class="direct-contact">
+            <div class="contact-item">
+              <img src="wa.svg" alt="WhatsApp" class="c-icon">
+              <div>
+                <span>واتساب المباشر</span>
+                <a href="https://wa.me/972525272910" target="_blank" dir="ltr">+972 52-527-2910</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <img src="ig.svg" alt="Instagram" class="c-icon">
+              <div>
+                <span>انستغرام</span>
+                <a href="https://instagram.com/madabytarek" target="_blank">@madabytarek</a>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="cta-row">
-            <button class="btn btn-primary" id="waBtn">أرسل التفاصيل عبر واتساب</button>
-          </div>
+        <div class="contact-form-wrap glass" data-aos="fade-right">
+          <form class="form floating-form" id="leadForm" onsubmit="return false;">
+            <div class="input-group">
+              <input type="text" id="f_name" required placeholder=" ">
+              <label>الاسم الكامل</label>
+            </div>
 
-          <p id="formError" class="err"></p>
-        </form>
+            <div class="input-group">
+              <input type="email" id="f_email" required placeholder=" ">
+              <label>البريد الإلكتروني</label>
+            </div>
 
-        <div class="contact-card" data-aos="fade-up">
-          <h3>تواصلوا معنا وتابعونا !</h3>
-          <div class="row">
-            <div><strong>واتساب:</strong> <a href="https://wa.me/972525272910" target="_blank">0525272910</a></div>
-            <div><strong>إنستجرام:</strong> <a href="https://instagram.com/madabytarek" target="_blank">@madabytarek</a></div>
-          </div>
+            <div class="input-group">
+              <input type="tel" id="f_phone" required placeholder=" ">
+              <label>رقم الهاتف</label>
+            </div>
 
-          <div class="social-icons">
-            <a class="icon-link" href="https://instagram.com/madabytarek" target="_blank"><img src="ig.svg"></a>
-            <a class="icon-link" href="https://wa.me/972525272910" target="_blank"><img src="wa.svg"></a>
-          </div>
+            <div class="input-group">
+              <textarea id="f_message" required placeholder=" "></textarea>
+              <label>نبذة عن مشروعك</label>
+            </div>
+
+            <button class="btn btn-primary w-full" id="waBtn">إرسال تفاصيل المشروع</button>
+            <p id="formError" class="err"></p>
+          </form>
         </div>
       </div>
     </div>
@@ -349,7 +318,11 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© <span id="year"></span> MadaByTarek — Designed & Developed ❤️</p>
+    <div class="container">
+      <div class="logo"><img src="MadaStudio.png" alt="Mada Studio"
+          style="width: 80px; margin: 0 auto; margin-bottom:15px;"></div>
+      <p>© <span id="year"></span> MadaByTarek — Designed & Developed for Conversion</p>
+    </div>
   </footer>
 
   <!-- AOS -->
@@ -359,4 +332,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>

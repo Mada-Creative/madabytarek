@@ -1,49 +1,91 @@
-// AOS
-AOS.init({ duration: 700, once: true });
+// AOS Initialization
+AOS.init({ duration: 800, once: true, offset: 50 });
 
-// Header shrink
+// Custom Cursor
+const cursorDot = document.getElementById("cursor-dot");
+const cursorOutline = document.getElementById("cursor-outline");
+
+if (cursorDot && cursorOutline && !window.matchMedia("(max-width: 768px)").matches) {
+  window.addEventListener("mousemove", (e) => {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+
+    // Slight delay for the outline
+    cursorOutline.animate({
+      left: `${posX}px`,
+      top: `${posY}px`
+    }, { duration: 150, fill: "forwards" });
+  });
+
+  // Expand outline on hover
+  const hoverElements = document.querySelectorAll("a, button, input, textarea");
+  hoverElements.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      cursorOutline.style.width = "50px";
+      cursorOutline.style.height = "50px";
+      cursorOutline.style.backgroundColor = "rgba(23, 227, 178, 0.1)";
+    });
+    el.addEventListener("mouseleave", () => {
+      cursorOutline.style.width = "30px";
+      cursorOutline.style.height = "30px";
+      cursorOutline.style.backgroundColor = "transparent";
+    });
+  });
+}
+
+// Header Shrink
 const header = document.querySelector(".header");
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 12) header.classList.add("shrink");
-  else header.classList.remove("shrink");
+  if (window.scrollY > 20) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
 });
 
-// Mobile menu
+// Mobile Menu
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 const navLinks = document.querySelectorAll("#nav-menu a");
 
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-navLinks.forEach(a => a.addEventListener("click", () => navMenu.classList.remove("active")));
-
-// Testimonials
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
-let current = 0;
-
-function show(i) {
-  slides.forEach((s, idx) => s.classList.toggle("active", idx === i));
-  dots.forEach((d, idx) => d.classList.toggle("active", idx === i));
-}
-function next() {
-  current = (current + 1) % slides.length;
-  show(current);
-}
-
-let timer = setInterval(next, 4000);
-dots.forEach((d, idx) => {
-  d.addEventListener("click", () => {
-    current = idx;
-    show(current);
-    clearInterval(timer);
-    timer = setInterval(next, 4000);
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
   });
+
+  navLinks.forEach(a => {
+    a.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+}
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll(".faq-item");
+faqItems.forEach(item => {
+  const btn = item.querySelector(".faq-question");
+  if(btn) {
+    btn.addEventListener("click", () => {
+      // Close others
+      faqItems.forEach(other => {
+        if(other !== item) {
+          other.classList.remove("active");
+        }
+      });
+      // Toggle current
+      item.classList.toggle("active");
+    });
+  }
 });
 
-// Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
+// Footer Year
+const yearEl = document.getElementById("year");
+if(yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
 // WhatsApp Form
 (function () {
@@ -54,27 +96,32 @@ document.getElementById("year").textContent = new Date().getFullYear();
   const msgEl = document.getElementById("f_message");
   const errorEl = document.getElementById("formError");
 
-  waBtn.addEventListener("click", () => {
-    if (!nameEl.value.trim()) return showErr("ادخل الاسم الكامل.");
-    if (!emailEl.value.trim()) return showErr("ادخل البريد الإلكتروني.");
-    if (!msgEl.value.trim()) return showErr("اكتب فكرة المشروع.");
+  if(waBtn) {
+    waBtn.addEventListener("click", () => {
+      if (!nameEl.value.trim()) return showErr("ادخل الاسم الكامل.");
+      if (!emailEl.value.trim()) return showErr("ادخل البريد الإلكتروني.");
+      if (!phoneEl.value.trim()) return showErr("ادخل رقم الهاتف.");
+      if (!msgEl.value.trim()) return showErr("اكتب نبذة عن المشروع.");
 
-    errorEl.style.display = "none";
+      errorEl.style.display = "none";
 
-    const phone = "972525272910";
-    const message = encodeURIComponent(
-      `مرحباً 👋\n\nطلب جديد من موقع MadaByTarek:\n\n` +
-      `الاسم: ${nameEl.value}\n` +
-      `الإيميل: ${emailEl.value}\n` +
-      `رقم الهاتف: ${phoneEl.value}\n` +
-      `المشروع: ${msgEl.value}\n\n`
-    );
+      const phone = "972525272910";
+      const message = encodeURIComponent(
+        `مرحباً طارق 👋\n\nمهتم بخدماتكم لمشروع جديد:\n\n` +
+        `الاسم: ${nameEl.value}\n` +
+        `الإيميل: ${emailEl.value}\n` +
+        `رقم الهاتف: ${phoneEl.value}\n` +
+        `عن المشروع: ${msgEl.value}\n\n`
+      );
 
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
-  });
+      window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    });
+  }
 
   function showErr(msg) {
-    errorEl.textContent = msg;
-    errorEl.style.display = "block";
+    if(errorEl) {
+      errorEl.textContent = msg;
+      errorEl.style.display = "block";
+    }
   }
 })();
