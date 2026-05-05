@@ -67,11 +67,11 @@ if (menuToggle && navMenu) {
 const faqItems = document.querySelectorAll(".faq-item");
 faqItems.forEach(item => {
   const btn = item.querySelector(".faq-question");
-  if(btn) {
+  if (btn) {
     btn.addEventListener("click", () => {
       // Close others
       faqItems.forEach(other => {
-        if(other !== item) {
+        if (other !== item) {
           other.classList.remove("active");
         }
       });
@@ -83,7 +83,7 @@ faqItems.forEach(item => {
 
 // Footer Year
 const yearEl = document.getElementById("year");
-if(yearEl) {
+if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
@@ -96,7 +96,7 @@ if(yearEl) {
   const msgEl = document.getElementById("f_message");
   const errorEl = document.getElementById("formError");
 
-  if(waBtn) {
+  if (waBtn) {
     waBtn.addEventListener("click", () => {
       if (!nameEl.value.trim()) return showErr("ادخل الاسم الكامل.");
       if (!emailEl.value.trim()) return showErr("ادخل البريد الإلكتروني.");
@@ -119,7 +119,7 @@ if(yearEl) {
   }
 
   function showErr(msg) {
-    if(errorEl) {
+    if (errorEl) {
       errorEl.textContent = msg;
       errorEl.style.display = "block";
     }
