@@ -523,6 +523,8 @@ section { padding: 110px 0; }
 .case-studies { display: flex; flex-direction: column; gap: 90px; }
 .case-study { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 
+.cs-media { display: flex; flex-direction: column; }
+
 .cs-image {
   position: relative;
   border-radius: var(--r-lg);
@@ -535,14 +537,9 @@ section { padding: 110px 0; }
 .cs-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
 .cs-image:hover img { transform: scale(1.05); }
 
-.cs-overlay {
-  position: absolute; inset: 0;
-  background: var(--overlay);
-  display: flex; justify-content: center; align-items: center;
-  opacity: 0; transition: var(--transition);
-  backdrop-filter: blur(3px);
-}
-.cs-image:hover .cs-overlay { opacity: 1; }
+/* Always-visible "visit site" link (never hover-only — unusable on touch) */
+.cs-visit-link { margin-top: 16px; align-self: flex-start; }
+.portfolio-grid-item .cs-visit-link { margin-top: 10px; }
 
 .cs-category {
   display: inline-block;
@@ -915,7 +912,7 @@ section { padding: 110px 0; }
 
 @media (max-width: 768px) {
   .case-study { grid-template-columns: 1fr; gap: 26px; }
-  .cs-image { order: -1; }
+  .cs-media { order: -1; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-form-wrap { padding: 28px 20px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
