@@ -4,28 +4,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mada — High-End Web Studio</title>
+  <title>Mada — استوديو تصميم وبرمجة مواقع، تطبيقات ومتاجر شوبيفاي</title>
+  <meta name="description" content="مدى باي طارق: بناء مواقع عرض، تطبيقات موبايل، ومتاجر شوبيفاي احترافية. احسب سعر مشروعك مباشرة وتواصل عبر واتساب.">
 
   <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Outfit:wght@400;500;700&display=swap"
-    rel="stylesheet">
-
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="mada.png">
-  <link rel="apple-touch-icon" href="mada.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
 
   <!-- Social Preview -->
   <meta property="og:title" content="Mada — نحول فكرتك لهوية رقمية فخمة تبيع عنك" />
-  <meta property="og:description"
-    content="Landing Pages • مواقع تعريفية • متاجر إلكترونية — بناء تجارب مستخدم استثنائية." />
-  <meta property="og:image" content="mada.png" />
+  <meta property="og:description" content="بناء مواقع عرض، تطبيقات موبايل، ومتاجر شوبيفاي — احسب سعر مشروعك مباشرة." />
+  <meta property="og:image" content="assets/img/brand/logo.png" />
   <meta property="og:url" content="https://mada-creative.github.io/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -33,22 +31,21 @@
 
 <body>
 
-  <!-- Custom Cursor -->
-  <div class="cursor-dot" id="cursor-dot"></div>
-  <div class="cursor-outline" id="cursor-outline"></div>
-
   <!-- Header -->
   <header class="header" id="top">
     <div class="container">
-      <div class="logo"><img src="MadaStudio.png" alt="Mada Studio"></div>
+      <a class="logo" href="#top"><img src="assets/img/brand/logo.png" alt="Mada"></a>
 
-      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
       <nav class="nav" id="nav-menu">
         <ul>
-          <li><a href="#home">الرئيسية</a></li>
-          <li><a href="#showcase">أعمالنا</a></li>
+          <li><a href="#top">الرئيسية</a></li>
+          <li><a href="#portfolio">أعمالنا</a></li>
           <li><a href="#services">خدماتنا</a></li>
-          <li><a href="#process">آلية العمل</a></li>
+          <li><a href="#about">من نحن</a></li>
           <li><a href="#faq">الأسئلة الشائعة</a></li>
           <li><a href="#contact" class="nav-cta">ابدأ مشروعك</a></li>
         </ul>
@@ -58,103 +55,52 @@
 
   <!-- Hero -->
   <section class="hero" id="home">
-    <!-- Animated Abstract Mesh Background -->
     <div class="hero-bg-orb"></div>
     <div class="hero-bg-orb orb-2"></div>
 
     <div class="hero-content">
-      <div class="hero-text">
-        <div class="eyebrow" data-aos="fade-up">HIGH-END WEB DESIGN STUDIO</div>
-        <h1 data-aos="fade-up" data-aos-delay="100">
-          نحوّل فكرتك إلى واجهة رقمية فخمة <br /><span>تضاعف مبيعاتك.</span>
-        </h1>
-        <p data-aos="fade-up" data-aos-delay="200">
-          نحن لا نصمم مجرد مواقع، بل نبني تجارب مستخدم استثنائية (UX/UI) تعكس قيمة علامتك التجارية وتجبر الزائر على
-          اتخاذ القرار.
-        </p>
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        استوديو تصميم وبرمجة مستقل — <b>تواصل مباشر مع طارق طوال مشروعك</b>
+      </div>
 
-        <div class="cta-row" data-aos="fade-up" data-aos-delay="300">
-          <a class="btn btn-primary" href="#contact">احجز استشارة مجانية</a>
-          <a class="btn btn-ghost" href="#showcase">شاهد أعمالنا</a>
-        </div>
+      <h1>
+        نحوّل فكرتك إلى واجهة رقمية فخمة <br /><span class="gradient-text">تضاعف مبيعاتك.</span>
+      </h1>
+      <p class="hero-desc">
+        نصمم ونبرمج مواقع عرض، تطبيقات موبايل، ومتاجر شوبيفاي — بتجربة استخدام تعكس قيمة علامتك التجارية
+        وتقود الزائر لاتخاذ القرار. اعرف السعر التقديري لمشروعك بنفسك، خلال دقيقة.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#services">احسب سعر مشروعك</a>
+        <a class="btn btn-ghost" href="#portfolio">شاهد أعمالنا</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num"><span>+10</span></div><div class="lbl">مشروع حقيقي منجز</div></div>
+        <div class="hero-stat"><div class="num"><span>3</span></div><div class="lbl">خدمات متخصصة</div></div>
+        <div class="hero-stat"><div class="num"><span>14</span></div><div class="lbl">يوم ضمان تعديلات مجانية</div></div>
       </div>
     </div>
   </section>
 
-  <!-- Marquee (Social Proof) -->
-  <section class="marquee-section">
+  <!-- Real client logos -->
+  <section class="clients-section">
+    <p class="clients-heading">من العلامات التجارية التي بنينا لها حضورها الرقمي</p>
     <div class="marquee-wrapper">
-      <div class="marquee">
-        <span>شركاء النجاح</span><span class="dot"></span>
-        <span>علامات تجارية وثقت بنا</span><span class="dot"></span>
-        <span>شركاء النجاح</span><span class="dot"></span>
-        <span>علامات تجارية وثقت بنا</span><span class="dot"></span>
-        <span>شركاء النجاح</span><span class="dot"></span>
-        <span>علامات تجارية وثقت بنا</span><span class="dot"></span>
-        <span>شركاء النجاح</span><span class="dot"></span>
-        <span>علامات تجارية وثقت بنا</span><span class="dot"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Showcase / Case Studies -->
-  <section class="showcase" id="showcase">
-    <div class="section-wrap">
-      <div class="head" data-aos="fade-up">
-        <div class="eyebrow">CASE STUDIES</div>
-        <h2 class="title">مشاريع صُممت للتحويل</h2>
-      </div>
-
-      <div class="case-studies">
-        <!-- Project 1 -->
-        <div class="case-study left">
-          <div class="cs-image" data-aos="fade-right">
-            <img src="2.png" alt="Zain Shop">
-            <div class="cs-overlay">
-              <a href="https://fefeland.com/" target="_blank" class="btn btn-primary btn-sm">زيارة الموقع</a>
-            </div>
-          </div>
-          <div class="cs-info" data-aos="fade-left">
-            <h3>Fefe Land</h3>
-            <p class="cs-category">متجر إلكتروني / E-Commerce</p>
-            <p class="cs-desc">واجهة تسوق مريحة وسريعة مصممة لتقليل التخلي عن سلة المشتريات وزيادة نسبة التحويل (CRO).
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="case-study right">
-          <div class="cs-info" data-aos="fade-right">
-            <h3>Sugar Cake</h3>
-            <p class="cs-category">موقع تعريفي + طلبات / Branding</p>
-            <p class="cs-desc">هوية رقمية فخمة تعكس جودة المنتجات، مع تجربة مستخدم سلسة لتصفح الكتالوج.</p>
-          </div>
-          <div class="cs-image" data-aos="fade-left">
-            <img src="sugarcake.png" alt="Sugar Cake">
-            <div class="cs-overlay">
-              <a href="https://sugar-cake.com/" target="_blank" class="btn btn-primary btn-sm">زيارة الموقع</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="case-study left">
-          <div class="cs-image" data-aos="fade-right">
-            <img src="abaq.png" alt="Abaq">
-            <div class="cs-overlay">
-              <a href="https://itsabaq.com/" target="_blank" class="btn btn-primary btn-sm">زيارة الموقع</a>
-            </div>
-          </div>
-          <div class="cs-info" data-aos="fade-left">
-            <h3>Abaq - عبق</h3>
-            <p class="cs-category">متجر إلكتروني فخم / Luxury E-Commerce</p>
-            <p class="cs-desc">تصميم مستوحى من الفخامة يعزز الثقة ويسلط الضوء على تفاصيل العلامة التجارية الراقية.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="view-more" data-aos="fade-up">
-        <a href="#services" class="btn btn-ghost">اكتشف خدماتنا</a>
+      <div class="marquee-track">
+        <div class="client-logo"><img src="assets/img/clients/valley-cubs.png" alt="Valley Cubs"></div>
+        <div class="client-logo client-logo--light"><img src="assets/img/clients/roaa-imagery.png" alt="Roaa Imagery"></div>
+        <div class="client-logo"><img src="assets/img/clients/yahya-saadi.png" alt="Yahya Saadi"></div>
+        <div class="client-logo"><img src="assets/img/clients/pastry-academy.png" alt="Pastry Academy by Esraa Hasson"></div>
+        <div class="client-logo client-logo--light"><img src="assets/img/clients/signature.png" alt="Signature"></div>
+        <!-- duplicate set for seamless loop -->
+        <div class="client-logo" aria-hidden="true"><img src="assets/img/clients/valley-cubs.png" alt=""></div>
+        <div class="client-logo client-logo--light" aria-hidden="true"><img src="assets/img/clients/roaa-imagery.png" alt=""></div>
+        <div class="client-logo" aria-hidden="true"><img src="assets/img/clients/yahya-saadi.png" alt=""></div>
+        <div class="client-logo" aria-hidden="true"><img src="assets/img/clients/pastry-academy.png" alt=""></div>
+        <div class="client-logo client-logo--light" aria-hidden="true"><img src="assets/img/clients/signature.png" alt=""></div>
       </div>
     </div>
   </section>
@@ -162,30 +108,177 @@
   <!-- Services -->
   <section class="services" id="services">
     <div class="section-wrap">
-      <div class="head" data-aos="fade-up">
+      <div class="head center reveal">
         <div class="eyebrow">OUR EXPERTISE</div>
-        <h2 class="title">حلول مبنية على النتائج</h2>
-        <p class="lead">نحن لا نبيع تصاميم، بل نبيع حلولاً متكاملة تزيد من عملائك وتوفر وقتك.</p>
+        <h2 class="title">اختر خدمتك، واحسب سعرها فورًا</h2>
+        <p class="lead" style="margin-inline:auto;">كل خدمة إلها صفحة فيها كل التفاصيل، وحاسبة سعر تفاعلية تقدر ترسل نتيجتها لطارق مباشرة على واتساب.</p>
       </div>
 
       <div class="cards">
-        <div class="card glass" data-aos="fade-up">
-          <div class="icon">🚀</div>
-          <h3>صفحات هبوط عالية التحويل</h3>
-          <p>أكثر من مجرد تصميم. نبني مساراً تسويقياً كاملاً مع نسخ إعلاني مقنع يستهدف الزائر ويقوده مباشرة للشراء.</p>
+        <a class="card glass service-card reveal" href="services/websites.html">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.2"/><path d="M3 9h18"/><circle cx="6.3" cy="6.5" r=".6" fill="currentColor" stroke="none"/><circle cx="8.6" cy="6.5" r=".6" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3>بناء مواقع العرض</h3>
+          <p>موقع تعريفي احترافي لعملك أو خدماتك أو منتجاتك، بتصميم مخصص وسرعة تحميل عالية.</p>
+          <div class="price-tag"><span class="from">يبدأ من</span> <span class="amount">5,990</span> <span class="cur">₪</span></div>
+          <span class="card-cta">احسب السعر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+        </a>
+
+        <a class="card glass service-card reveal reveal-delay-1" href="services/apps.html">
+          <span class="new-badge">خدمة جديدة</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2" width="11" height="20" rx="2.4"/><path d="M10.5 18h3"/></svg>
+          </div>
+          <h3>بناء تطبيقات</h3>
+          <p>تطبيق موبايل حقيقي لعملك على Android وiOS، من واجهة عرض بسيطة إلى تطبيق متكامل بلوحة تحكم.</p>
+          <div class="price-tag"><span class="from">يبدأ من</span> <span class="amount">4,990</span> <span class="cur">₪</span></div>
+          <span class="card-cta">احسب السعر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+        </a>
+
+        <a class="card glass service-card reveal reveal-delay-2" href="services/stores.html">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          </div>
+          <h3>متاجر شوبيفاي</h3>
+          <p>متجر إلكتروني كامل على شوبيفاي، جاهز لاستقبال الطلبات والدفع الإلكتروني من أول يوم.</p>
+          <div class="price-tag"><span class="from">يبدأ من</span> <span class="amount">9,990</span> <span class="cur">₪</span></div>
+          <span class="card-cta">احسب السعر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase / Case Studies -->
+  <section class="showcase" id="portfolio">
+    <div class="section-wrap">
+      <div class="head reveal">
+        <div class="eyebrow">CASE STUDIES</div>
+        <h2 class="title">مشاريع صُممت للتحويل</h2>
+        <p class="lead" style="margin-inline:auto;">جزء من مشاريع حقيقية سلّمناها لعملاء بمجالات مختلفة — من التجارة الإلكترونية للمطاعم والخدمات.</p>
+      </div>
+
+      <div class="case-studies">
+        <!-- Fefe Land -->
+        <div class="case-study left">
+          <div class="cs-image reveal">
+            <img src="assets/img/portfolio/fefe-land.webp" alt="Fefe Land" loading="lazy">
+            <div class="cs-overlay">
+              <a href="https://fefeland.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">زيارة الموقع</a>
+            </div>
+          </div>
+          <div class="cs-info reveal">
+            <span class="cs-category">متجر إلكتروني</span>
+            <h3>Fefe Land</h3>
+            <p class="cs-desc">واجهة تسوق مريحة وسريعة مصممة لتقليل التخلي عن سلة المشتريات وزيادة نسبة التحويل.</p>
+          </div>
         </div>
 
-        <div class="card glass" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon">💎</div>
-          <h3>مواقع تعريفية فاخرة (Showcase)</h3>
-          <p>واجهة رقمية تليق بمكانتك. نبني مواقع تعكس احترافيتك وتخلق انطباعاً أولياً لا يُنسى لزوارك.</p>
+        <!-- Abaq -->
+        <div class="case-study right">
+          <div class="cs-info reveal">
+            <span class="cs-category">متجر إلكتروني فخم</span>
+            <h3>Abaq — عبق</h3>
+            <p class="cs-desc">تصميم مستوحى من الفخامة يعزز الثقة ويسلّط الضوء على تفاصيل العلامة التجارية الراقية.</p>
+          </div>
+          <div class="cs-image reveal">
+            <img src="assets/img/portfolio/abaq.webp" alt="Abaq" loading="lazy">
+            <div class="cs-overlay">
+              <a href="https://itsabaq.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">زيارة الموقع</a>
+            </div>
+          </div>
         </div>
 
-        <div class="card glass" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon">🛒</div>
-          <h3>متاجر إلكترونية مبيعة</h3>
-          <p>تجارب تسوق سلسة خالية من التعقيد، مجهزة تقنياً لرفع نسبة المبيعات بأقل مقاومة من المشتري.</p>
+        <!-- Adan Gifts -->
+        <div class="case-study left">
+          <div class="cs-image reveal">
+            <img src="assets/img/portfolio/adan-gifts.webp" alt="Adan Gifts" loading="lazy">
+            <div class="cs-overlay">
+              <a href="https://adangifts.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">زيارة الموقع</a>
+            </div>
+          </div>
+          <div class="cs-info reveal">
+            <span class="cs-category">متجر شوبيفاي</span>
+            <h3>Adan Gifts</h3>
+            <p class="cs-desc">متجر شوبيفاي متكامل لمستلزمات المنزل والهدايا، بتصنيفات وفلاتر واضحة وتجربة شراء سلسة على الموبايل.</p>
+          </div>
         </div>
+
+        <!-- Sugar Cake -->
+        <div class="case-study right">
+          <div class="cs-info reveal">
+            <span class="cs-category">موقع تعريفي وتسجيل</span>
+            <h3>Sugar Cake</h3>
+            <p class="cs-desc">هوية رقمية فخمة تعكس جودة المنتجات، مع تجربة تسجيل سلسة لورشة تعليم صناعة الكيك.</p>
+          </div>
+          <div class="cs-image reveal">
+            <img src="assets/img/portfolio/sugar-cake.webp" alt="Sugar Cake" loading="lazy">
+            <div class="cs-overlay">
+              <a href="https://sugar-cake.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">زيارة الموقع</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pastry Academy -->
+        <div class="case-study left">
+          <div class="cs-image reveal">
+            <img src="assets/img/portfolio/pastry-academy-site.webp" alt="Pastry Academy by Esraa Hasson" loading="lazy">
+            <div class="cs-overlay">
+              <a href="https://esraahassonacademy.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">زيارة الموقع</a>
+            </div>
+          </div>
+          <div class="cs-info reveal">
+            <span class="cs-category">حجز ورشات</span>
+            <h3>Pastry Academy by Esraa Hasson</h3>
+            <p class="cs-desc">موقع حجز ورشات بهوية أنثوية فخمة، يشجع الزائرة على التسجيل المباشر بخطوة أو خطوتين.</p>
+          </div>
+        </div>
+
+        <!-- Zain Shop -->
+        <div class="case-study right">
+          <div class="cs-info reveal">
+            <span class="cs-category">متجر إلكتروني</span>
+            <h3>Zain Shop</h3>
+            <p class="cs-desc">متجر إلكتروني بهوية بصرية جريئة، وصفحات منتج مصممة لتحويل الزوار إلى عملاء فعليين.</p>
+          </div>
+          <div class="cs-image reveal">
+            <img src="assets/img/portfolio/zain-shop.webp" alt="Zain Shop" loading="lazy">
+            <div class="cs-overlay">
+              <a href="https://zainshop2.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">زيارة الموقع</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compact grid: more work -->
+      <div class="portfolio-grid" style="margin-top:90px;">
+        <div class="portfolio-grid-item reveal">
+          <div class="cs-image">
+            <img src="assets/img/portfolio/signature-hr.webp" alt="Signature" loading="lazy">
+            <div class="cs-overlay"><a href="https://signature-hr.co.il/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">زيارة الموقع</a></div>
+          </div>
+          <span class="cs-category">موقع تعريفي</span>
+          <h4>Signature</h4>
+        </div>
+        <div class="portfolio-grid-item reveal reveal-delay-1">
+          <div class="cs-image">
+            <img src="assets/img/portfolio/majles-jat.webp" alt="مجلس جت المحلي" loading="lazy">
+            <div class="cs-overlay"><a href="https://majles-tournaments.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">زيارة الموقع</a></div>
+          </div>
+          <span class="cs-category">موقع مؤسسي</span>
+          <h4>مجلس جت — قسم الرياضة</h4>
+        </div>
+        <div class="portfolio-grid-item reveal reveal-delay-2">
+          <div class="cs-image">
+            <img src="assets/img/portfolio/tan-tuni.webp" alt="Tan Tuni" loading="lazy">
+          </div>
+          <span class="cs-category">قائمة مطعم رقمية</span>
+          <h4>Tan Tuni</h4>
+        </div>
+      </div>
+
+      <div class="portfolio-footer reveal">
+        <a href="#contact" class="btn btn-ghost">حاب مشروعك يكون هون؟ تواصل معنا</a>
       </div>
     </div>
   </section>
@@ -193,32 +286,101 @@
   <!-- Process -->
   <section class="process" id="process">
     <div class="section-wrap">
-      <div class="head" data-aos="fade-up">
+      <div class="head reveal">
         <div class="eyebrow">THE PROCESS</div>
         <h2 class="title">خطوات بسيطة لنجاحك الرقمي</h2>
       </div>
 
       <div class="timeline">
         <div class="timeline-line"></div>
-        <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-item reveal">
           <div class="t-dot"></div>
           <div class="t-content">
-            <h4>1. الاستكشاف والاستراتيجية</h4>
-            <p>نجلس معاً لفهم أهدافك، جمهورك، والمشاكل التي تريد حلها. نبني الخطة المثالية لمشروعك.</p>
+            <h4><span class="t-num">1</span> الاستكشاف والاستراتيجية</h4>
+            <p>نجلس معاً لفهم أهدافك، جمهورك، والمشاكل التي تريد حلها، ونحدد الخدمة والباقة المناسبة عبر الحاسبة التفاعلية.</p>
           </div>
         </div>
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-item reveal reveal-delay-1">
           <div class="t-dot"></div>
           <div class="t-content">
-            <h4>2. التصميم (UI/UX)</h4>
-            <p>نبدأ بتصميم نماذج مرئية فخمة تضمن أفضل تجربة استخدام لزوارك مع مراعاة أدق تفاصيل علامتك.</p>
+            <h4><span class="t-num">2</span> الوايرفريم والتصميم (UI/UX)</h4>
+            <p>نبدأ بتصميم نماذج مرئية فخمة، ولا ننتقل لمرحلة البرمجة إلا بعد موافقتك النهائية على الوايرفريم والتصميم. مسموح حتى 3 جولات تعديل على التصميم مجانًا.</p>
           </div>
         </div>
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="timeline-item reveal reveal-delay-2">
           <div class="t-dot"></div>
           <div class="t-content">
-            <h4>3. التطوير والإطلاق 🚀</h4>
-            <p>نحوّل التصميم إلى موقع حقيقي بأكواد نظيفة وأداء فائق، ونسلمه لك جاهزاً لاستقبال العملاء.</p>
+            <h4><span class="t-num">3</span> التطوير والإطلاق 🚀</h4>
+            <p>نحوّل التصميم المعتمد إلى موقع أو تطبيق حقيقي بأكواد نظيفة وأداء عالي، ونسلّمه لك جاهزًا مع 14 يوم دعم وتعديلات مجانية.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Founder -->
+  <section class="about-section" id="about">
+    <div class="section-wrap">
+      <div class="about-grid">
+        <div class="about-photo-wrap reveal">
+          <div class="about-photo-glow"></div>
+          <div class="about-photo">
+            <img src="assets/img/brand/tarek.webp" alt="طارق — مؤسس Mada">
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <div class="eyebrow">WHO WE ARE</div>
+          <h2>مدى مش شركة كبيرة، <span class="founder-name">أنا طارق</span> ومسؤول عن مشروعك من أول فكرة لآخر تفصيل.</h2>
+          <p>ما في طبقات تواصل أو فريق دعم تمر فيه — بتحكي معي مباشرة على الواتساب من أول يوم استشارة لحد ما يطلع مشروعك عالإنترنت، وحتى بعد التسليم.</p>
+          <p>اشتغلت مع عملاء من مجالات مختلفة كثير — متاجر إلكترونية، مطاعم، أكاديميات تدريب، مجالس رياضية، وخدمات — وكل مشروع بصممه وببرمجه بإيدي، مش قوالب جاهزة.</p>
+
+          <div class="about-points">
+            <div class="about-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>
+              <span><b>تصميم وبرمجة مخصصة</b><span class="desc"> — كل مشروع يُبنى من الصفر حسب هوية علامتك، مش قالب معدّل.</span></span>
+            </div>
+            <div class="about-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>
+              <span><b>سعر واضح من البداية</b><span class="desc"> — احسب سعر مشروعك بنفسك قبل ما نبدأ، بدون مفاجآت.</span></span>
+            </div>
+            <div class="about-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>
+              <span><b>دعم فعلي بعد التسليم</b><span class="desc"> — 14 يوم تعديلات مجانية كاملة، مش مجرد شعار.</span></span>
+            </div>
+          </div>
+
+          <a class="btn btn-primary" href="#contact">احكيني عن مشروعك</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-wrap">
+      <div class="head center reveal">
+        <div class="eyebrow">FEEDBACK</div>
+        <h2 class="title">شو حكى العملاء</h2>
+        <p class="lead" style="margin-inline:auto;">رسائل حقيقية من عملاء بعد تسليم مشاريعهم — بدون تعديل على المعنى.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass reveal">
+          <svg class="testimonial-quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7c-2.2 0-4 1.8-4 4 0 2.1 1.6 3.8 3.6 4-.4 1.6-1.6 2.8-3.6 3v2c3.9-.2 6-2.8 6-6.5V11c0-2.2-1.8-4-4-4Zm10 0c-2.2 0-4 1.8-4 4 0 2.1 1.6 3.8 3.6 4-.4 1.6-1.6 2.8-3.6 3v2c3.9-.2 6-2.8 6-6.5V11c0-2.2-1.8-4-4-4Z"/></svg>
+          <p class="testimonial-text">"قلي الموقع بيجنن، الحمدلله اخترت الشخص الصح."</p>
+          <div class="testimonial-source">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+            من رسالة واتساب حقيقية من أحد العملاء
+          </div>
+        </div>
+
+        <div class="testimonial-card glass reveal reveal-delay-1">
+          <svg class="testimonial-quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7c-2.2 0-4 1.8-4 4 0 2.1 1.6 3.8 3.6 4-.4 1.6-1.6 2.8-3.6 3v2c3.9-.2 6-2.8 6-6.5V11c0-2.2-1.8-4-4-4Zm10 0c-2.2 0-4 1.8-4 4 0 2.1 1.6 3.8 3.6 4-.4 1.6-1.6 2.8-3.6 3v2c3.9-.2 6-2.8 6-6.5V11c0-2.2-1.8-4-4-4Z"/></svg>
+          <p class="testimonial-text">"الله يبارك، حبيبو كثير مميز، بوركت! 🙌"</p>
+          <div class="testimonial-source">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+            من رسالة واتساب حقيقية من أحد العملاء
           </div>
         </div>
       </div>
@@ -228,31 +390,40 @@
   <!-- FAQ -->
   <section class="faq-section" id="faq">
     <div class="section-wrap">
-      <div class="head" data-aos="fade-up">
+      <div class="head reveal">
         <div class="eyebrow">FAQ</div>
         <h2 class="title">الأسئلة الشائعة</h2>
       </div>
 
       <div class="faq-container">
-        <div class="faq-item" data-aos="fade-up">
-          <button class="faq-question">كم يستغرق بناء الموقع؟<span class="icon">+</span></button>
+        <div class="faq-item reveal">
+          <button class="faq-question">كم يستغرق بناء الموقع أو التطبيق؟<span class="icon">+</span></button>
           <div class="faq-answer">
-            <p>يعتمد ذلك على حجم المشروع. صفحات الهبوط والمواقع البسيطة تأخذ من أسبوع إلى أسبوعين. المتاجر والمشاريع
-              الكبيرة قد تستغرق 3-4 أسابيع لضمان الجودة العالية.</p>
+            <p>يعتمد ذلك على حجم المشروع وعدد الصفحات أو الشاشات. المواقع البسيطة تأخذ عادة من أسبوع إلى أسبوعين، بينما المتاجر والتطبيقات الأكبر قد تحتاج وقتًا أطول لضمان الجودة. المدة النهائية تتحدد بعد اعتماد التصميم.</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
-          <button class="faq-question">هل الموقع سيكون متجاوباً مع الجوال؟<span class="icon">+</span></button>
+        <div class="faq-item reveal">
+          <button class="faq-question">هل الموقع سيكون متجاوبًا مع الجوال؟<span class="icon">+</span></button>
           <div class="faq-answer">
-            <p>بالتأكيد. أكثر من 80% من الزيارات تأتي من الجوال، لذلك نعتمد نهج "Mobile-First" في التصميم لضمان تجربة
-              مثالية على جميع الأجهزة.</p>
+            <p>بالتأكيد. أكثر من 80% من الزيارات تأتي من الجوال، لذلك نعتمد نهج "Mobile-First" في التصميم لضمان تجربة مثالية على جميع الأجهزة.</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-          <button class="faq-question">هل سأتمكن من تعديل المحتوى لاحقاً؟<span class="icon">+</span></button>
+        <div class="faq-item reveal">
+          <button class="faq-question">شو سياسة التعديل على التصميم؟<span class="icon">+</span></button>
           <div class="faq-answer">
-            <p>نعم، نوفر لك إمكانية إدارة المحتوى بسهولة إذا كان مشروعك يتطلب ذلك، ونقدم دعماً وتوجيهاً كاملاً لتتمكن من
-              إدارة موقعك بنفسك.</p>
+            <p>مسموح حتى 3 جولات تعديل مجانية على الوايرفريم والتصميم قبل بدء البرمجة. أي جولة تعديل إضافية بعدها تكلف 590 ₪. البرمجة ما بتبدأ إلا بعد موافقتك النهائية على التصميم.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">شو بصير بعد ما يتسلّم الموقع؟<span class="icon">+</span></button>
+          <div class="faq-answer">
+            <p>بتحصل على 14 يوم ضمان دعم وتعديلات مجانية كاملة من تاريخ التسليم. بعد انتهاء الفترة، أي تعديل بسيط بكلف 290 ₪، وأي تعديل كبير (مثل إضافة سكشن كامل) بكلف 490 ₪. تفاصيل الأسعار الكاملة لكل خدمة موجودة بصفحتها.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">هل فيه إمكانية إدارة المحتوى بنفسي لاحقًا؟<span class="icon">+</span></button>
+          <div class="faq-answer">
+            <p>نعم، إذا كان مشروعك يحتاج لذلك بنوفرلك إمكانية تعديل المحتوى بسهولة، مع شرح كامل لكيفية إدارة موقعك أو تطبيقك بنفسك.</p>
           </div>
         </div>
       </div>
@@ -263,30 +434,30 @@
   <section class="contact-split" id="contact">
     <div class="section-wrap">
       <div class="contact-grid">
-        <div class="contact-text" data-aos="fade-left">
+        <div class="contact-text reveal">
           <div class="eyebrow">READY?</div>
           <h2>مستعد للارتقاء بعلامتك التجارية؟</h2>
           <p>دعنا نناقش كيف يمكننا تحويل رؤيتك إلى واقع رقمي مذهل يخدم أهدافك ويزيد من أرباحك.</p>
 
           <div class="direct-contact">
             <div class="contact-item">
-              <img src="wa.svg" alt="WhatsApp" class="c-icon">
+              <img src="assets/icons/whatsapp.svg" alt="" class="c-icon">
               <div>
-                <span>واتساب المباشر</span>
-                <a href="https://wa.me/972525272910" target="_blank" dir="ltr">+972 52-527-2910</a>
+                <span class="label">واتساب المباشر</span>
+                <a href="https://wa.me/972525272910" target="_blank" rel="noopener" dir="ltr">+972 52-527-2910</a>
               </div>
             </div>
             <div class="contact-item">
-              <img src="ig.svg" alt="Instagram" class="c-icon">
+              <img src="assets/icons/instagram.svg" alt="" class="c-icon">
               <div>
-                <span>انستغرام</span>
-                <a href="https://instagram.com/madabytarek" target="_blank">@madabytarek</a>
+                <span class="label">انستغرام</span>
+                <a href="https://instagram.com/madabytarek" target="_blank" rel="noopener">@madabytarek</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="contact-form-wrap glass" data-aos="fade-right">
+        <div class="contact-form-wrap glass reveal">
           <form class="form floating-form" id="leadForm" onsubmit="return false;">
             <div class="input-group">
               <input type="text" id="f_name" required placeholder=" ">
@@ -308,7 +479,7 @@
               <label>نبذة عن مشروعك</label>
             </div>
 
-            <button class="btn btn-primary w-full" id="waBtn">إرسال تفاصيل المشروع</button>
+            <button class="btn btn-primary w-full" id="waBtn" type="button">إرسال تفاصيل المشروع</button>
             <p id="formError" class="err"></p>
           </form>
         </div>
@@ -318,19 +489,48 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="logo"><img src="MadaStudio.png" alt="Mada Studio"
-          style="width: 80px; margin: 0 auto; margin-bottom:15px;"></div>
-      <p>© <span id="year"></span> MadaByTarek — Designed & Developed for Conversion</p>
+    <div class="section-wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/brand/logo.png" alt="Mada">
+          <p>استوديو تصميم وبرمجة مستقل — مواقع عرض، تطبيقات موبايل، ومتاجر شوبيفاي بلمسة شخصية من الفكرة للإطلاق.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/972525272910" target="_blank" rel="noopener" aria-label="واتساب"><img src="assets/icons/whatsapp.svg" alt=""></a>
+            <a href="https://instagram.com/madabytarek" target="_blank" rel="noopener" aria-label="انستغرام"><img src="assets/icons/instagram.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>خدماتنا</h5>
+          <ul>
+            <li><a href="services/websites.html">بناء مواقع العرض</a></li>
+            <li><a href="services/apps.html">بناء تطبيقات</a></li>
+            <li><a href="services/stores.html">متاجر شوبيفاي</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>الموقع</h5>
+          <ul>
+            <li><a href="#portfolio">أعمالنا</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#faq">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>تواصل</h5>
+          <ul>
+            <li><a href="https://wa.me/972525272910" target="_blank" rel="noopener" dir="ltr">+972 52-527-2910</a></li>
+            <li><a href="https://instagram.com/madabytarek" target="_blank" rel="noopener">@madabytarek</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year></span> MadaByTarek — Designed & Developed for Conversion</p>
+        <a href="privacy-policy.html">سياسة الخصوصية</a>
+      </div>
     </div>
   </footer>
 
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-  <!-- JS -->
-  <script src="script.js"></script>
-
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
