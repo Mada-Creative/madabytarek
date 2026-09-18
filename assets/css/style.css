@@ -493,19 +493,16 @@ section { padding: 110px 0; }
 .service-card h3 { color: #fff; font-size: 1.3rem; margin-bottom: 12px; }
 .service-card p { color: var(--muted); line-height: 1.8; font-size: 0.98rem; margin-bottom: 22px; flex-grow: 1; }
 
-.service-card .price-tag {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
+.service-card .card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 0.95rem;
   padding-top: 18px;
   border-top: 1px solid var(--stroke);
-  margin-bottom: 16px;
 }
-.price-tag .from { color: var(--muted-2); font-size: 0.82rem; }
-.price-tag .amount { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--brand-3); }
-.price-tag .cur { color: var(--brand-3); font-size: 0.95rem; }
-
-.service-card .card-cta { display: inline-flex; align-items: center; gap: 8px; color: var(--brand); font-weight: 700; font-size: 0.95rem; }
 .service-card .card-cta svg { width: 18px; height: 18px; transition: transform 0.25s var(--ease); }
 .service-card:hover .card-cta svg { transform: translateX(-4px); }
 
@@ -662,7 +659,7 @@ section { padding: 110px 0; }
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
 .faq-answer p, .faq-answer ul { padding: 0 24px 22px; color: var(--muted); line-height: 1.85; }
 .faq-answer ul { padding-inline-start: 40px; list-style: disc; }
-.faq-item.active .faq-answer { max-height: 400px; }
+.faq-item.active .faq-answer { max-height: 900px; }
 .faq-item.active .faq-question .icon { transform: rotate(45deg); }
 
 /* ===== Contact / Lead form ===== */
@@ -864,6 +861,13 @@ section { padding: 110px 0; }
 .included-item svg { width: 22px; height: 22px; color: var(--brand); flex-shrink: 0; margin-top: 2px; }
 .included-item h4 { color: #fff; font-size: 1rem; margin-bottom: 6px; }
 .included-item p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+.included-item p.who-needs {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--stroke);
+  color: var(--brand-3);
+}
+.included-item p.who-needs b { color: var(--brand-3); }
 
 .cross-sell { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .cross-sell-card {
